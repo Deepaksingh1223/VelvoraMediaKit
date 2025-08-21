@@ -4,6 +4,7 @@ import { useState } from "react";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 import { MdAppRegistration } from "react-icons/md";
 import Link from "next/link";
+import Image from 'next/image'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,13 +14,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo + Title */}
-          <div className="flex items-center space-x-3 cursor-pointer">
+          <Link href="/" className="flex items-center space-x-3 cursor-pointer">
             <div className="relative group">
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              <img
+              <Image
                 src="/favicon.png"
                 alt="Rentelligence Logo"
-                className="w-12 h-12 object-contain relative z-10"
+                width={48}
+                height={48}
+                className="object-contain relative z-10"
               />
             </div>
             <div>
@@ -27,13 +30,13 @@ export default function Header() {
                 Rentelligence
               </h1>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="/" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Home
-            </button>
+            </Link>
             <button className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Resources
             </button>
@@ -46,7 +49,7 @@ export default function Header() {
 
             <div className="h-6 w-px bg-gray-300 opacity-50"></div>
 
-            <Link href = "/" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap cursor-pointer group">
+            <Link href="https://app.rentelligence.ai/home/register" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap cursor-pointer group">
               <MdAppRegistration className="inline-block mr-2 group-hover:animate-pulse text-lg" />
               Register Now
             </Link>
@@ -78,7 +81,7 @@ export default function Header() {
             </button>
 
             <Link
-              href="/"
+              href="https://app.rentelligence.ai/home/register"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap cursor-pointer group"
             >
               <MdAppRegistration className="inline-block mr-2 group-hover:animate-pulse text-lg" />

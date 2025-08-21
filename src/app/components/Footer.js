@@ -1,5 +1,5 @@
 "use client"
-import { FaRobot } from "react-icons/fa";
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -8,14 +8,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Logo & Title */}
           <div className="flex items-center space-x-3 mb-4 md:mb-0">
-            <img
+            <Image
               src="/favicon.png"
               alt="Rentelligence Logo"
-              className="w-8 h-8 object-contain"
+              width={32}
+              height={32}
+              className="object-contain"
             />
             <span className="text-xl font-bold flex items-center gap-2">
-              <FaRobot className="text-blue-400" />
-              Rentelligence Media Kit
+              Rentelligence 
             </span>
           </div>
 
