@@ -1,14 +1,34 @@
 "use client";
 import { RiArrowRightLine, RiExternalLinkLine } from "react-icons/ri";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const ResourceCard = ({ resource }) => {
+  
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    if (resource.title === "Legal Certificate") {
+      router.push("/pages/legal-certificate");
+    }
+
+    if (resource.title === "Promotional Videos") {
+      router.push("/pages/promotional-videos");
+    }
+    // Add other navigation cases here if needed
+  };
+
   return (
-    <div className="group bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-500 cursor-pointer hover:scale-[1.02] relative">
+    <div 
+      className="group bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-500 cursor-pointer hover:scale-[1.02] relative"
+      onClick={handleCardClick}
+    >
       <div className="relative h-52 overflow-hidden">
         <Image
           src={resource?.img}
           alt={resource?.title}
+          width={50}
+          height={50}
           className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
         />
         <div

@@ -30,7 +30,7 @@ export const resourcesData = [
     title: "Company Presentations",
     desc: "Multilingual investor pitches and company presentations.",
     badge: "6 Languages Available",
-    img: " /presentation.jpg",
+    img: "/presentation.jpg",
     color: "from-purple-500 to-pink-500",
     icon: <RiSlideshow3Line className="text-white text-xl" />,
     category: "Documents",

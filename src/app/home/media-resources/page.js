@@ -298,7 +298,7 @@ export default function MediaResources() {
                   Can&apos;t find what you&apos;re looking for? Contact our team for
                   custom resources.
                 </p>
-                <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 whitespace-nowrap">
+                <button className="bg-gradient-to-r  from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 ">
                   <RiCustomerService2Line className="inline mr-2" />
                   Request Custom Resource
                 </button>
