@@ -8,16 +8,17 @@ import {
 } from "react-icons/ri";
 import VideoPopUp from "@/app/components/VideoPopUp";
 
-import { businessVideos } from "@/app/constant/constant";
-import { businessLanguages } from "@/app/constant/constant";
+import { businessVideos, businessLanguages, features } from "@/app/constant/constant";
 import Link from "next/link";
 import Image from "next/image";
-import { features } from "@/app/constant/constant";
 
 const BusinessPlanVideos = () => {
-  const [selectedLang, setSelectedLang] = useState();
-   const [selectedVideo, setSelectedVideo] = useState(null);
-  const filteredVideos = businessVideos.filter((v) => v.lang === selectedLang);
+  const [selectedLang, setSelectedLang] = useState("en");
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const filteredVideos = selectedLang
+    ? businessVideos.filter((video) => video?.lang?.includes(selectedLang))
+    : businessVideos;
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
@@ -37,7 +38,6 @@ const BusinessPlanVideos = () => {
         </p>
       </div>
 
-      {/* Language Selector */}
       <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
           Select Language
@@ -60,7 +60,6 @@ const BusinessPlanVideos = () => {
         </div>
       </div>
 
-      {/* Videos Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {filteredVideos.map((video, idx) => (
           <div
@@ -70,26 +69,33 @@ const BusinessPlanVideos = () => {
             <div className="relative">
               <Image
                 src={video.img}
-                width={50}
-                height={50}
+                width={400}
+                height={200}
                 alt={video.title}
                 className="w-full h-48 object-cover object-top"
               />
-              <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                  <RiPlayFill className="text-white text-2xl ml-1" />
-                </div>
-              </div>
+
+              {selectedLang && video.lang.includes(selectedLang) && (
+                <span className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {businessLanguages.find((l) => l.code === selectedLang)?.flag}{" "}
+                  {businessLanguages.find((l) => l.code === selectedLang)?.name}
+                </span>
+              )}
+
+              {/* Duration */}
               <div className="absolute bottom-3 right-3 bg-black/70 backdrop-blur-sm rounded px-2 py-1">
                 <span className="text-white text-sm font-medium">
                   {video.duration}
                 </span>
               </div>
-              <div className="absolute top-3 left-3">
-                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {businessLanguages.find((l) => l.code === video.lang)?.flag}{" "}
-                  {businessLanguages.find((l) => l.code === video.lang)?.name}
-                </span>
+
+              <div
+                onClick={() => setSelectedVideo(video)}
+                className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer"
+              >
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <RiPlayFill className="text-white text-2xl ml-1" />
+                </div>
               </div>
             </div>
 
@@ -101,7 +107,10 @@ const BusinessPlanVideos = () => {
                 {video.desc}
               </p>
               <div className="flex space-x-2">
-                <button onClick={() => setSelectedVideo(video)} className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 rounded-lg hover:shadow-lg transition-all text-sm whitespace-nowrap cursor-pointer">
+                <button
+                  onClick={() => setSelectedVideo(video)}
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 rounded-lg hover:shadow-lg transition-all text-sm whitespace-nowrap cursor-pointer"
+                >
                   <RiPlayLine className="inline-block mr-1" /> Watch Video
                 </button>
                 <button className="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
@@ -115,9 +124,7 @@ const BusinessPlanVideos = () => {
 
       {/* Features */}
       <div className="bg-white rounded-2xl shadow-lg p-8">
-        <h3 className="text-2xl font-bold text-gray-900 mb-6">
-          Video Features
-        </h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Video Features</h3>
         <div className="grid md:grid-cols-3 gap-6">
           {features.map((f, idx) => (
             <div key={idx} className="text-center">
@@ -131,9 +138,10 @@ const BusinessPlanVideos = () => {
         </div>
       </div>
 
-       <VideoPopUp 
-        video={selectedVideo} 
-        onClose={() => setSelectedVideo(null)} 
+      {/* Video Popup */}
+      <VideoPopUp
+        video={selectedVideo}
+        onClose={() => setSelectedVideo(null)}
       />
     </div>
   );
