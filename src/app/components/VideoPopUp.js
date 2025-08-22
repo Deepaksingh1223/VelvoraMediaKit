@@ -27,13 +27,22 @@ const VideoPopUp = ({ video, onClose }) => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
+            ) : video.src ? (
+              <video
+                src={video.src}
+                controls
+                autoPlay
+                className="w-full h-full object-contain"
+              />
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center text-white text-center p-8">
                 <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6">
                   <RiPlayFill className="text-white text-3xl ml-1" />
                 </div>
                 <h4 className="text-xl font-semibold mb-2">Training Video</h4>
-                <p className="text-gray-300 mb-4">This training content will be available soon</p>
+                <p className="text-gray-300 mb-4">
+                  This training content will be available soon
+                </p>
                 {video.img && (
                   <img
                     src={video.img}
@@ -44,12 +53,15 @@ const VideoPopUp = ({ video, onClose }) => {
               </div>
             )}
           </div>
+
           <div className="space-y-3">
             <p className="text-gray-600">{video.desc}</p>
             <div className="flex items-center space-x-4 text-sm text-gray-500">
               <span>Duration: {video.duration}</span>
               {video.views && <span>Views: {video.views}</span>}
-              {video.category && <span className="capitalize">Category: {video.category}</span>}
+              {video.category && (
+                <span className="capitalize">Category: {video.category}</span>
+              )}
             </div>
           </div>
         </div>

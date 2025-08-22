@@ -4,18 +4,18 @@ import {
   RiPlayCircleLine,
   RiVideoLine,
   RiGraduationCapLine,
-   RiUserAddLine,
+  RiUserAddLine,
   RiLoginCircleLine,
   RiMoneyDollarCircleLine,
   RiServiceLine,
   RiFundsLine,
   RiBarChartLine,
-   RiHdLine,
+  RiHdLine,
   RiDownloadCloudLine,
   RiUserStarLine,
 } from "react-icons/ri";
 import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
-import { FaClosedCaptioning } from "react-icons/fa"; 
+import { FaClosedCaptioning } from "react-icons/fa";
 
 export const highlights = [
   { value: "500+", label: "AI Agents Deployed" },
@@ -198,53 +198,6 @@ export const languages = [
   { flag: "🇪🇸", label: "Spanish" },
 ];
 
-
-export const businessVideos = [
-  {
-    title: "Business Model Explanation",
-    desc: "Comprehensive overview of Rentelligence business model and revenue streams.",
-    duration: "12:45",
-    lang: "es",
-    img: "/BusinessImages/BusinessModel.jpg",
-  },
-  {
-    title: "Market Analysis & Opportunity",
-    desc: "Deep dive into market size, competitive landscape, and growth opportunities.",
-    duration: "15:30",
-    lang: "es",
-    img: "/BusinessImages/MarketAnalytics.jpg",
-  },
-  {
-    title: "Financial Projections",
-    desc: "Detailed financial forecasts, projections, and investment requirements.",
-    duration: "10:20",
-    lang: "es",
-    img: "/BusinessImages/financial Project.jpg",
-  },
-  {
-    title: "Team & Leadership",
-    desc: "Introduction to key team members, advisors, and leadership expertise.",
-    duration: "8:15",
-    lang: "es",
-    img: "/BusinessImages/Team.jpg",
-  },
-  {
-    title: "Technology & Innovation",
-    desc: "Overview of AI technology stack, innovation approach, and technical advantages.",
-    duration: "14:10",
-    lang: "es",
-    img: "/BusinessImages/Technonlogy.jpg",
-  },
-  {
-    title: "Success Stories & Case Studies",
-    desc: "Real client success stories and case studies demonstrating our impact.",
-    duration: "11:45",
-    lang: "es",
-    img: "/BusinessImages/SuccessStory.jpg",
-  },
-];
-
-
 export const businessLanguages = [
   { code: "en", flag: "🇺🇸", name: "English" },
   { code: "hi", flag: "🇮🇳", name: "Hindi" },
@@ -252,6 +205,57 @@ export const businessLanguages = [
   { code: "th", flag: "🇹🇭", name: "Thai" },
   { code: "ar", flag: "🇸🇦", name: "Arabic" },
   { code: "es", flag: "🇪🇸", name: "Spanish" },
+];
+
+export const businessVideos = [
+  {
+    title: "Business Model Explanation",
+    desc: "Comprehensive overview of Rentelligence business model and revenue streams.",
+    duration: "12:45",
+    lang: ["es", "hi", "zh", "ar", "th", "en"],
+    img: "/BusinessImages/BusinessModel.jpg",
+    youtubeId: "dQw4w9WgXcQ", // 👈 add this
+  },
+  {
+    title: "Market Analysis & Opportunity",
+    desc: "Deep dive into market size, competitive landscape, and growth opportunities.",
+    duration: "15:30",
+    lang: ["es", "hi", "zh", "ar", "th", "en"],
+    img: "/BusinessImages/MarketAnalytics.jpg",
+    youtubeId: "kXYiU_JCYtU",
+  },
+  {
+    title: "Financial Projections",
+    desc: "Detailed financial forecasts, projections, and investment requirements.",
+    duration: "10:20",
+    lang: ["es", "hi", "zh", "ar", "th", "en"],
+    img: "/BusinessImages/financial Project.jpg",
+    youtubeId: "JGwWNGJdvx8",
+  },
+  {
+    title: "Team & Leadership",
+    desc: "Introduction to key team members, advisors, and leadership expertise.",
+    duration: "8:15",
+    lang: ["es", "hi", "zh", "ar", "th", "en"],
+    img: "/BusinessImages/Team.jpg",
+    youtubeId: "3JZ_D3ELwOQ",
+  },
+  {
+    title: "Technology & Innovation",
+    desc: "Overview of AI technology stack, innovation approach, and technical advantages.",
+    duration: "14:10",
+    lang: ["es", "hi", "zh", "ar", "th", "en"],
+    img: "/BusinessImages/Technonlogy.jpg",
+    youtubeId: "9bZkp7q19f0",
+  },
+  {
+    title: "Success Stories & Case Studies",
+    desc: "Real client success stories and case studies demonstrating our impact.",
+    duration: "11:45",
+    lang: ["es", "hi", "zh", "ar", "th", "en"],
+    img: "/BusinessImages/SuccessStory.jpg",
+    youtubeId: "tVj0ZTS4WF4",
+  },
 ];
 
 export const ceoVideos = [
@@ -300,8 +304,18 @@ export const modules = [
     title: "Login Process",
     icon: <RiLoginCircleLine className="text-xl" />,
     videos: [
-      { title: "Login Steps", desc: "Learn secure login", duration: "4:10", img: "https://via.placeholder.com/400x225" },
-      { title: "Two-Factor Setup", desc: "Enable 2FA for security", duration: "6:05", img: "https://via.placeholder.com/400x225" },
+      {
+        title: "Login Steps",
+        desc: "Learn secure login",
+        duration: "4:10",
+        img: "https://via.placeholder.com/400x225",
+      },
+      {
+        title: "Two-Factor Setup",
+        desc: "Enable 2FA for security",
+        duration: "6:05",
+        img: "https://via.placeholder.com/400x225",
+      },
     ],
   },
   {
@@ -309,8 +323,18 @@ export const modules = [
     title: "Deposit Funds",
     icon: <RiMoneyDollarCircleLine className="text-xl" />,
     videos: [
-      { title: "Deposit via Bank", desc: "Using bank transfer", duration: "5:00", img: "https://via.placeholder.com/400x225" },
-      { title: "Deposit via UPI", desc: "Quick UPI payments", duration: "4:20", img: "https://via.placeholder.com/400x225" },
+      {
+        title: "Deposit via Bank",
+        desc: "Using bank transfer",
+        duration: "5:00",
+        img: "https://via.placeholder.com/400x225",
+      },
+      {
+        title: "Deposit via UPI",
+        desc: "Quick UPI payments",
+        duration: "4:20",
+        img: "https://via.placeholder.com/400x225",
+      },
     ],
   },
   {
@@ -318,8 +342,18 @@ export const modules = [
     title: "Lease Agent",
     icon: <RiServiceLine className="text-xl" />,
     videos: [
-      { title: "Assign Lease Agent", desc: "Step-by-step leasing", duration: "7:15", img: "https://via.placeholder.com/400x225" },
-      { title: "Agent Management", desc: "Handle multiple agents", duration: "6:00", img: "https://via.placeholder.com/400x225" },
+      {
+        title: "Assign Lease Agent",
+        desc: "Step-by-step leasing",
+        duration: "7:15",
+        img: "https://via.placeholder.com/400x225",
+      },
+      {
+        title: "Agent Management",
+        desc: "Handle multiple agents",
+        duration: "6:00",
+        img: "https://via.placeholder.com/400x225",
+      },
     ],
   },
   {
@@ -327,8 +361,18 @@ export const modules = [
     title: "Fund Management",
     icon: <RiFundsLine className="text-xl" />,
     videos: [
-      { title: "Fund Allocation", desc: "Allocate funds properly", duration: "8:10", img: "https://via.placeholder.com/400x225" },
-      { title: "Fund Tracking", desc: "Track all transactions", duration: "5:50", img: "https://via.placeholder.com/400x225" },
+      {
+        title: "Fund Allocation",
+        desc: "Allocate funds properly",
+        duration: "8:10",
+        img: "https://via.placeholder.com/400x225",
+      },
+      {
+        title: "Fund Tracking",
+        desc: "Track all transactions",
+        duration: "5:50",
+        img: "https://via.placeholder.com/400x225",
+      },
     ],
   },
   {
@@ -336,8 +380,18 @@ export const modules = [
     title: "Reports & Analytics",
     icon: <RiBarChartLine className="text-xl" />,
     videos: [
-      { title: "Report Dashboard", desc: "Analyze key reports", duration: "9:20", img: "https://via.placeholder.com/400x225" },
-      { title: "Export Data", desc: "Download detailed analytics", duration: "6:30", img: "https://via.placeholder.com/400x225" },
+      {
+        title: "Report Dashboard",
+        desc: "Analyze key reports",
+        duration: "9:20",
+        img: "https://via.placeholder.com/400x225",
+      },
+      {
+        title: "Export Data",
+        desc: "Download detailed analytics",
+        duration: "6:30",
+        img: "https://via.placeholder.com/400x225",
+      },
     ],
   },
 ];
@@ -349,7 +403,7 @@ export const features = [
     desc: "All videos available in high definition for crystal clear viewing",
   },
   {
-    icon: <FaClosedCaptioning  className="text-blue-600 text-xl" />,
+    icon: <FaClosedCaptioning className="text-blue-600 text-xl" />,
     title: "Subtitles",
     desc: "Closed captions available in all supported languages",
   },
