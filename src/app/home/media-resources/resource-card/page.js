@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const ResourceCard = ({ resource }) => {
-  
   const router = useRouter();
 
   const handleCardClick = () => {
@@ -15,11 +14,25 @@ const ResourceCard = ({ resource }) => {
     if (resource.title === "Promotional Videos") {
       router.push("/pages/promotional-videos");
     }
-    // Add other navigation cases here if needed
+
+    if (resource.title === "Company Presentations") {
+      router.push("/pages/company-presentations");
+    }
+
+    if (resource.title === "Business Plan Videos") {
+      router.push("/pages/business-plan-videos");
+    }
+
+    if (resource.title === "CEO Message") {
+      router.push("/pages/ceo-messages");
+    }
+    if (resource.title === "Process Training Videos") {
+      router.push("/pages/crm-training-videos");
+    }
   };
 
   return (
-    <div 
+    <div
       className="group bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-500 cursor-pointer hover:scale-[1.02] relative"
       onClick={handleCardClick}
     >
