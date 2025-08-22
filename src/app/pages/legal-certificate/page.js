@@ -1,20 +1,19 @@
-
 import React from "react";
-import { 
-  FiArrowLeft, 
-  FiAward, 
-  FiCheck, 
-  FiFileText, 
-  FiDownload, 
-  FiInfo 
+import {
+  FiArrowLeft,
+  FiAward,
+  FiCheck,
+  FiFileText,
+  FiDownload,
+  FiInfo,
 } from "react-icons/fi";
 import Link from "next/link";
+import { certificateDetails } from "@/app/constant/constant";
 
 const LegalCertificate = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-green-50">
       <div className="max-w-4xl mx-auto px-6 py-12">
-        
         {/* Back Link */}
         <div className="mb-8">
           <Link
@@ -61,26 +60,15 @@ const LegalCertificate = () => {
                   Certificate Details
                 </h3>
                 <div className="space-y-4">
-                  {[
-                    {
-                      title: "Company Registration",
-                      desc: "Official business registration certificate",
-                    },
-                    {
-                      title: "Legal Compliance",
-                      desc: "Fully compliant with regulatory requirements",
-                    },
-                    {
-                      title: "Verification Status",
-                      desc: "Verified and authenticated by authorities",
-                    },
-                  ].map((item, index) => (
+                  {certificateDetails.map((item, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-1">
                         <FiCheck className="text-emerald-600 text-sm" />
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">{item.title}</p>
+                        <p className="font-medium text-gray-900">
+                          {item.title}
+                        </p>
                         <p className="text-gray-600 text-sm">{item.desc}</p>
                       </div>
                     </div>
@@ -96,10 +84,15 @@ const LegalCertificate = () => {
                 <div className="bg-gray-50 rounded-lg p-6 border-2 border-dashed border-gray-300">
                   <div className="text-center">
                     <FiFileText className="text-4xl text-gray-400 mb-4 mx-auto" />
-                    <p className="text-gray-600 mb-4">Official certificate document</p>
-                    <button className="bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all whitespace-nowrap cursor-pointer flex items-center justify-center mx-auto">
+                    <p className="text-gray-600 mb-4">
+                      Official certificate document
+                    </p>
+                    <Link
+                      href="https://rentelligence.ai/cirtificate.jpg"
+                      className="bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all whitespace-nowrap cursor-pointer flex items-center justify-center mx-auto"
+                    >
                       <FiDownload className="mr-2" /> View Certificate
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -116,10 +109,10 @@ const LegalCertificate = () => {
                     Certificate Authenticity
                   </h4>
                   <p className="text-gray-700 mb-4">
-                    This certificate serves as official proof of Rentelligence&apos;s
-                    legal business status and regulatory compliance. It can be
-                    used for verification purposes with partners, clients, and
-                    regulatory bodies.
+                    This certificate serves as official proof of
+                    Rentelligence&apos;s legal business status and regulatory
+                    compliance. It can be used for verification purposes with
+                    partners, clients, and regulatory bodies.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {["Verified", "Authentic", "Official"].map((tag, i) => (
@@ -134,7 +127,6 @@ const LegalCertificate = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
