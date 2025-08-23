@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  font-family: 'Geist';
 }
 
 @theme inline {
@@ -22,5 +23,27 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Geist';
+}
+
+.banner-heading {
+    background: #0086d1;
+    padding: 5px;
+    border-radius: 4px;
+    width: 120px;
+    text-align: center;
+    margin: 15px 0px;
+}
+@keyframes text-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-text {
+  background-size: 200% auto;
+  animation: text-gradient 4s linear infinite alternate;
 }

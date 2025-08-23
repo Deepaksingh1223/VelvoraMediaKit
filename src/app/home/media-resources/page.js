@@ -130,10 +130,11 @@ export default function MediaResources() {
                   {/* Promotional Flyer Card */}
                   <div className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-[1.02] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full transform translate-x-10 -translate-y-10"></div>
-                    <div className="relative flex items-start space-x-4">
-                      <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center group-hover:bg-white/30 transition-colors group-hover:scale-110 duration-300">
+                    <div className="mb-3 w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center group-hover:bg-white/30 transition-colors group-hover:scale-110 duration-300">
                         <FaRegImage className="text-white text-2xl" />
                       </div>
+                    <div className="relative flex items-start space-x-4">
+                     
                       <div className="flex-1">
                         <h3 className="text-lg font-bold text-white mb-2">
                           Promotional Flyer
@@ -142,7 +143,7 @@ export default function MediaResources() {
                           Professional marketing flyer showcasing Rentelligence
                           AI solutions and services.
                         </p>
-                        <div className="flex items-center space-x-4">
+                        <div className=" items-center space-x-4">
                           <span className="text-blue-200 text-xs font-medium bg-white/10 px-3 py-1 rounded-full">
                             Ready for print &amp; digital
                           </span>
@@ -157,10 +158,11 @@ export default function MediaResources() {
                   {/* Legal Certificate Card */}
                   <div className="group bg-white border-2 border-gray-200 hover:border-emerald-300 hover:shadow-xl rounded-xl p-6 cursor-pointer transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-50 rounded-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
-                    <div className="relative flex items-start space-x-4">
-                      <div className="w-14 h-14 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                   <div className="mb-3 w-14 h-14 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <PiCertificate className="text-white text-2xl" />
                       </div>
+                    <div className="relative flex items-start space-x-4">
+                      
                       <div className="flex-1">
                         <h3 className="text-lg font-bold text-gray-900 mb-2">
                           Legal Certificate
@@ -169,7 +171,7 @@ export default function MediaResources() {
                           Official business registration and certification
                           documents.
                         </p>
-                        <div className="flex items-center space-x-4">
+                        <div className=" items-center space-x-4">
                           <span className="text-emerald-600 text-xs font-medium bg-emerald-50 px-3 py-1 rounded-full">
                             Verified &amp; Authentic
                           </span>
@@ -194,50 +196,56 @@ export default function MediaResources() {
 
                 <div className="space-y-4">
                   {/* Google Play */}
-                  <a
-                    href="#"
-                    className="group flex items-center space-x-4 bg-black hover:bg-gray-800 rounded-xl p-4 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-                  >
-                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                      <FaGooglePlay className="text-white text-2xl" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-white font-semibold">Google Play</h4>
-                      <p className="text-gray-300 text-sm">
-                        Download for Android
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <div className="flex items-center space-x-1 text-yellow-400 mb-1">
-                        {[...Array(5)].map((_, i) => (
-                          <AiFillStar key={i} className="text-xs" />
-                        ))}
-                      </div>
-                      <p className="text-gray-400 text-xs">4.9 rating</p>
-                    </div>
-                  </a>
+                  <a 
+  href="#"
+  className="group flex flex-col items-center text-center bg-black hover:bg-gray-800 rounded-xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
+>
+  {/* Icon on Top */}
+  <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+    <FaGooglePlay className="text-white text-3xl" />
+  </div>
+
+  {/* Text Content */}
+  <h4 className="text-white font-semibold mb-1">Google Play</h4>
+  <p className="text-gray-300 text-sm mb-3">Download for Android</p>
+
+  {/* Rating Section */}
+  <div className="flex flex-col items-center">
+    <div className="flex items-center space-x-1 text-yellow-400 mb-1">
+      {[...Array(5)].map((_, i) => (
+        <AiFillStar key={i} className="text-xs" />
+      ))}
+    </div>
+    <p className="text-gray-400 text-xs">4.9 rating</p>
+  </div>
+</a>
+
 
                   {/* App Store */}
-                  <a
-                    href="#"
-                    className="group flex items-center space-x-4 bg-black hover:bg-gray-800 rounded-xl p-4 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-                  >
-                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                      <FaApple className="text-white text-2xl" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-white font-semibold">App Store</h4>
-                      <p className="text-gray-300 text-sm">Download for iOS</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="flex items-center space-x-1 text-yellow-400 mb-1">
-                        {[...Array(5)].map((_, i) => (
-                          <AiFillStar key={i} className="text-xs" />
-                        ))}
-                      </div>
-                      <p className="text-gray-400 text-xs">4.8 rating</p>
-                    </div>
-                  </a>
+                 <a
+  href="#"
+  className="group flex flex-col items-center text-center bg-black hover:bg-gray-800 rounded-xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
+>
+  {/* Icon on Top */}
+  <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+    <FaApple className="text-white text-3xl" />
+  </div>
+
+  {/* Text Content */}
+  <h4 className="text-white font-semibold mb-1">App Store</h4>
+  <p className="text-gray-300 text-sm mb-3">Download for iOS</p>
+
+  {/* Rating Section */}
+  <div className="flex flex-col items-center">
+    <div className="flex items-center space-x-1 text-yellow-400 mb-1">
+      {[...Array(5)].map((_, i) => (
+        <AiFillStar key={i} className="text-xs" />
+      ))}
+    </div>
+    <p className="text-gray-400 text-xs">4.8 rating</p>
+  </div>
+</a>
+
                 </div>
               </div>
             )}
@@ -247,18 +255,18 @@ export default function MediaResources() {
         <main className="lg:col-span-3 order-1 lg:order-2 bg-white rounded-3xl shadow-xl p-8 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-blue-100/50 to-transparent rounded-full transform translate-x-32 -translate-y-32"></div>
           <div className="relative">
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center justify-between mb-6 flex-wrap">
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-3">
                   Media Resources
                 </h2>
-                <p className="text-gray-600 text-lg">
+                <p className="text-gray-600 text-lg mb-3">
                   Comprehensive collection of digital assets
                 </p>
               </div>
 
               {/* Filter */}
-              <div className="hidden md:flex items-center space-x-2 bg-gray-100 rounded-full p-1">
+              <div className="md:flex items-center space-x-2 bg-gray-100 rounded-full p-1">
                 {["All", "Videos", "Documents"].map((f) => (
                   <button
                     key={f}
