@@ -100,10 +100,11 @@ const LegalCertificate = () => {
 
             {/* Authenticity Section */}
             <div className="mt-8 p-6 bg-emerald-50 rounded-lg border border-emerald-200">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
+             <div className="mb-3 w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center">
                   <FiInfo className="text-white text-xl" />
                 </div>
+              <div className="flex items-start space-x-4">
+                
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
                     Certificate Authenticity
