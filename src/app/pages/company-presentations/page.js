@@ -41,20 +41,51 @@ const CompanyPresentations = () => {
   };
 
   // Handle download for Investor Pitch Deck
-  const handleDownloadInvestor = async () => {
-    if (getActiveLanguage().label === 'English') {
-      setIsDownloadingInvestor(true);
-      // Simulate loading delay
-      await new Promise(resolve => setTimeout(resolve, 2000));
+  // const handleDownloadInvestor = async () => {
+  //   if (getActiveLanguage().label === 'English') {
+  //     setIsDownloadingInvestor(true);
+  //     // Simulate loading delay
+  //     await new Promise(resolve => setTimeout(resolve, 2000));
+  //     const link = document.createElement('a');
+  //     link.href = 'https://app.rentelligence.ai/Rentall.pdf';
+  //     link.download = 'Investor_Pitch_Deck.pdf';
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     document.body.removeChild(link);
+  //     setIsDownloadingInvestor(false);
+  //   }
+  // };
+  // Handle download for Investor Pitch Deck - FIXED VERSION
+const handleDownloadInvestor = async () => {
+  if (getActiveLanguage().label === 'English') {
+    setIsDownloadingInvestor(true);
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000));
       const link = document.createElement('a');
-      link.href = 'https://app.rentelligence.ai/Rentall.pdf';
-      link.download = 'Investor_Pitch_Deck.pdf';
+      link.href = '/Rental.pdf'; 
+      link.download = 'Investor_Pitch_Deck.pdf'; 
+      
+      link.setAttribute('download', '');
+      link.setAttribute('type', 'application/pdf');
+      
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      
+    } catch (error) {
+      console.error('Download error:', error);
+      
+      const absoluteUrl = `${window.location.origin}/Rental.pdf`;
+      window.open(absoluteUrl, '_blank');
+      
+    } finally {
       setIsDownloadingInvestor(false);
     }
-  };
+  } else {
+    alert('Available only in English');
+  }
+};
 
   // Handle preview for Investor Pitch Deck
   const handlePreviewInvestor = async () => {
@@ -68,20 +99,50 @@ const CompanyPresentations = () => {
   };
 
   // Handle download for Company Overview
+  // const handleDownloadOverview = async () => {
+  //   if (getActiveLanguage().label === 'English') {
+  //     setIsDownloadingOverview(true);
+  //     // Simulate loading delay
+  //     await new Promise(resolve => setTimeout(resolve, 2000));
+  //     const link = document.createElement('a');
+  //     link.href = 'http://rentelligence.world/Rentelligence_FF_PPT.pdf';
+  //     link.download = 'Company_Overview.pdf';
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     document.body.removeChild(link);
+  //     setIsDownloadingOverview(false);
+  //   }
+  // };
   const handleDownloadOverview = async () => {
-    if (getActiveLanguage().label === 'English') {
-      setIsDownloadingOverview(true);
-      // Simulate loading delay
-      await new Promise(resolve => setTimeout(resolve, 2000));
+  if (getActiveLanguage().label === 'English') {
+    setIsDownloadingOverview(true);
+    
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000));
       const link = document.createElement('a');
-      link.href = 'https://app.rentelligence.ai/Rentall.pdf';
-      link.download = 'Company_Overview.pdf';
+      link.href = '/Rentelligence_company.pdf'; 
+      link.download = 'Company_Overview.pdf'; 
+      
+      link.setAttribute('download', '');
+      link.setAttribute('type', 'application/pdf');
+      
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      
+    } catch (error) {
+      console.error('Download error:', error);
+      
+      const absoluteUrl = `${window.location.origin}/Rental.pdf`;
+      window.open(absoluteUrl, '_blank');
+      
+    } finally {
       setIsDownloadingOverview(false);
     }
-  };
+  } else {
+    alert('Available only in English');
+  }
+};
 
   // Handle preview for Company Overview
   const handlePreviewOverview = async () => {
@@ -89,7 +150,7 @@ const CompanyPresentations = () => {
       setIsPreviewingOverview(true);
       // Simulate loading delay
       await new Promise(resolve => setTimeout(resolve, 2000));
-      // window.open('https://app.rentelligence.ai/Rentall.pdf', '_blank');
+      window.open('http://rentelligence.world/Rentelligence_FF_PPT.pdf', '_blank');
       setIsPreviewingOverview(false);
     }
   };

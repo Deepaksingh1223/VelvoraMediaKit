@@ -23,7 +23,7 @@ const ResourceCard = ({ resource }) => {
       router.push("/pages/business-plan-videos");
     }
 
-    if (resource.title === "CEO Message") {
+    if (resource.title === "Pace") {
       router.push("/pages/ceo-messages");
     }
     if (resource.title === "Process Training Videos") {
