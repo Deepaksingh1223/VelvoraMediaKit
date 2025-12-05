@@ -85,7 +85,7 @@ export const links = [
   {
     name: "Instagram",
     desc: "Follow our journey",
-    href: "#",
+    href: "https://www.instagram.com/rentelligence.ai/?",
     icon: <FaInstagram className="text-white text-2xl" />,
     gradient:
       "from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600",
@@ -94,7 +94,7 @@ export const links = [
   {
     name: "Facebook",
     desc: "Like our page",
-    href: "#",
+    href: "https://www.facebook.com/rentelligenceai",
     icon: <FaFacebookF className="text-white text-2xl" />,
     gradient: "from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800",
     textColor: "text-blue-100",
@@ -123,7 +123,6 @@ export const certificateDetails = [
     desc: "Verified and authenticated by authorities",
   },
 ];
-
 export const videos = [
   {
     title: "AI Revolution with Rentelligence",

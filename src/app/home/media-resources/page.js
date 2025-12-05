@@ -10,7 +10,7 @@ import {
   FaGooglePlay,
   FaApple,
 } from "react-icons/fa";
- import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 
 import { PiCertificate } from "react-icons/pi";
 import { AiFillStar } from "react-icons/ai";
@@ -46,11 +46,10 @@ export default function MediaResources() {
             <div className="flex flex-col  space-x-1 bg-white rounded-xl p-1 shadow-inner">
               <button
                 onClick={() => setActiveTab("social")}
-                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${
-                  activeTab === "social"
+                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${activeTab === "social"
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
                     : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                }`}
+                  }`}
               >
                 <FaShareAlt className="text-lg" />
                 <span className="font-medium text-sm whitespace-nowrap">
@@ -60,11 +59,10 @@ export default function MediaResources() {
 
               <button
                 onClick={() => setActiveTab("downloads")}
-                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${
-                  activeTab === "downloads"
+                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${activeTab === "downloads"
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
                     : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                }`}
+                  }`}
               >
                 <FaCloudDownloadAlt className="text-lg" />
                 <span className="font-medium text-sm whitespace-nowrap">
@@ -74,11 +72,10 @@ export default function MediaResources() {
 
               <button
                 onClick={() => setActiveTab("apps")}
-                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${
-                  activeTab === "apps"
+                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${activeTab === "apps"
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
                     : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                }`}
+                  }`}
               >
                 <FaMobileAlt className="text-lg" />
                 <span className="font-medium text-sm whitespace-nowrap">
@@ -131,10 +128,10 @@ export default function MediaResources() {
                   <div className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-[1.02] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full transform translate-x-10 -translate-y-10"></div>
                     <div className="mb-3 w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center group-hover:bg-white/30 transition-colors group-hover:scale-110 duration-300">
-                        <FaRegImage className="text-white text-2xl" />
-                      </div>
+                      <FaRegImage className="text-white text-2xl" />
+                    </div>
                     <div className="relative flex items-start space-x-4">
-                     
+
                       <div className="flex-1">
                         <h3 className="text-lg font-bold text-white mb-2">
                           Promotional Flyer
@@ -158,11 +155,11 @@ export default function MediaResources() {
                   {/* Legal Certificate Card */}
                   <div className="group bg-white border-2 border-gray-200 hover:border-emerald-300 hover:shadow-xl rounded-xl p-6 cursor-pointer transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-50 rounded-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
-                   <div className="mb-3 w-14 h-14 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <PiCertificate className="text-white text-2xl" />
-                      </div>
+                    <div className="mb-3 w-14 h-14 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <PiCertificate className="text-white text-2xl" />
+                    </div>
                     <div className="relative flex items-start space-x-4">
-                      
+
                       <div className="flex-1">
                         <h3 className="text-lg font-bold text-gray-900 mb-2">
                           Legal Certificate
@@ -196,55 +193,54 @@ export default function MediaResources() {
 
                 <div className="space-y-4">
                   {/* Google Play */}
-                  <a 
-  href="#"
-  className="group flex flex-col items-center text-center bg-black hover:bg-gray-800 rounded-xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
->
-  {/* Icon on Top */}
-  <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-    <FaGooglePlay className="text-white text-3xl" />
-  </div>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share
+"
+                    className="group flex flex-col items-center text-center bg-black hover:bg-gray-800 rounded-xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  >
+                    {/* Icon on Top */}
+                    <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                      <FaGooglePlay className="text-white text-3xl" />
+                    </div>
 
-  {/* Text Content */}
-  <h4 className="text-white font-semibold mb-1">Google Play</h4>
-  <p className="text-gray-300 text-sm mb-3">Download for Android</p>
+                    {/* Text Content */}
+                    <h4 className="text-white font-semibold mb-1">Google Play</h4>
+                    <p className="text-gray-300 text-sm mb-3">Download for Android</p>
 
-  {/* Rating Section */}
-  <div className="flex flex-col items-center">
-    <div className="flex items-center space-x-1 text-yellow-400 mb-1">
-      {[...Array(5)].map((_, i) => (
-        <AiFillStar key={i} className="text-xs" />
-      ))}
-    </div>
-    <p className="text-gray-400 text-xs">4.9 rating</p>
-  </div>
-</a>
-
-
+                    {/* Rating Section */}
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-center space-x-1 text-yellow-400 mb-1">
+                        {[...Array(5)].map((_, i) => (
+                          <AiFillStar key={i} className="text-xs" />
+                        ))}
+                      </div>
+                      <p className="text-gray-400 text-xs">4.9 rating</p>
+                    </div>
+                  </a>
                   {/* App Store */}
-                 <a
-  href="#"
-  className="group flex flex-col items-center text-center bg-black hover:bg-gray-800 rounded-xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
->
-  {/* Icon on Top */}
-  <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-    <FaApple className="text-white text-3xl" />
-  </div>
+                  <a
+                    href="#"
+                    className="group flex flex-col items-center text-center bg-black hover:bg-gray-800 rounded-xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  >
+                    {/* Icon on Top */}
+                    <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                      <FaApple className="text-white text-3xl" />
+                    </div>
 
-  {/* Text Content */}
-  <h4 className="text-white font-semibold mb-1">App Store</h4>
-  <p className="text-gray-300 text-sm mb-3">Download for iOS</p>
+                    {/* Text Content */}
+                    <h4 className="text-white font-semibold mb-1">App Store</h4>
+                    <p className="text-gray-300 text-sm mb-3">Download for iOS</p>
 
-  {/* Rating Section */}
-  <div className="flex flex-col items-center">
-    <div className="flex items-center space-x-1 text-yellow-400 mb-1">
-      {[...Array(5)].map((_, i) => (
-        <AiFillStar key={i} className="text-xs" />
-      ))}
-    </div>
-    <p className="text-gray-400 text-xs">4.8 rating</p>
-  </div>
-</a>
+                    {/* Rating Section */}
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-center space-x-1 text-yellow-400 mb-1">
+                        {[...Array(5)].map((_, i) => (
+                          <AiFillStar key={i} className="text-xs" />
+                        ))}
+                      </div>
+                      <p className="text-gray-400 text-xs">4.8 rating</p>
+                    </div>
+                  </a>
 
                 </div>
               </div>
@@ -271,11 +267,10 @@ export default function MediaResources() {
                   <button
                     key={f}
                     onClick={() => setFilter(f)}
-                    className={`px-4 py-2 cursor-pointer text-sm font-medium rounded-full ${
-                      filter === f
+                    className={`px-4 py-2 cursor-pointer text-sm font-medium rounded-full ${filter === f
                         ? "bg-white shadow-sm text-gray-900"
                         : "text-gray-600 hover:text-gray-900"
-                    }`}
+                      }`}
                   >
                     {f}
                   </button>
