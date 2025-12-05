@@ -71,9 +71,9 @@ export const resourcesData = [
     category: "Videos",
   },
   {
-    title: "CEO Message",
-    desc: "Personal message from our CEO about vision & leadership.",
-    badge: "Leadership Insights",
+    title: "Pace",
+    desc: "Empowering innovation through AI-driven productivity solutions.",
+    badge: "Pace Leadership Insights",
     img: "/ceo-message.jpg",
     color: "from-indigo-500 to-purple-500",
     icon: <RiUserStarLine className="text-white text-xl" />,
@@ -195,7 +195,73 @@ export const languages = [
   { flag: "🇹🇭", label: "Thai" },
   { flag: "🇸🇦", label: "Arabic" },
   { flag: "🇪🇸", label: "Spanish" },
-];
+]
+
+export const Languages = [
+  { flag: "🇺🇸", label: "English", active: true },
+  { flag: "🇮🇳", label: "Hindi" },
+  { flag: "🇩🇪", label: "German" },
+  { flag: "🇷🇺", label: "Russian" },
+  { flag: "🇸🇦", label: "Arabic" },
+  { flag: "🇪🇸", label: "Spanish" },
+]
+
+export const ceoVideos = {
+  en: [
+    {
+      title: "Conceptual Understanding of Rentelligence and PACE | Complete Framework Explained in English",
+      desc: "Learn about the complete framework and conceptual understanding of Rentelligence and PACE",
+      duration: "06:35",
+      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      videoUrl: "https://www.youtube.com/watch?v=qz-SmV0VzLA"
+    },
+  ],
+  hi: [
+    {
+      title: "Rentelligence और PACE की संकल्पनात्मक समझ | Complete Concept Explained in Hindi",
+      desc: "Rentelligence और PACE की पूरी अवधारणा और ढांचे को समझें",
+      duration: "07:39",
+      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      videoUrl: "https://www.youtube.com/watch?v=sW5eNoTO5D0&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=6"
+    },
+  ],
+  ar: [
+    {
+      title: "الفهم المفاهيمي لـ Rentelligence و PACE | شرح شامل بطريقة مبسّطة",
+      desc: "تعرف على الإطار الكامل والفهم المفاهيمي لـ Rentelligence و PACE",
+      duration: "07:32",
+      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      videoUrl: "https://www.youtube.com/watch?v=4FUyDTriCXQ&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=5"
+    },
+  ],
+  de: [
+    {
+      title: "Konzeptuelles Verständnis von Rentelligence und PACE | Klare Erklärung für Anfänger",
+      desc: "Ein vollständiges Verständnis des Rentelligence- und PACE-Rahmens und der zugrunde liegenden Konzepte",
+      duration: "06:49",
+      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      videoUrl: "https://www.youtube.com/watch?v=qG2ufD1--0I&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm"
+    }
+  ],
+  ru: [
+    {
+      title: "Концептуальное понимание Rentelligence и PACE | Полный разбор системы и возможностей",
+      desc: "Изучение структуры и концептуального понимания Rentelligence и PACE",
+      duration: "07:24",
+      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      videoUrl: "https://www.youtube.com/watch?v=ZpozDmGgjHg&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=3"
+    }
+  ],
+  es: [
+    {
+      title: "Comprensión Conceptual de Rentelligence y PACE | Marco Completo Explicado",
+      desc: "Aprende sobre el marco completo y la comprensión conceptual de Rentelligence y PACE",
+      duration: "07:24",
+      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      videoUrl: "https://www.youtube.com/watch?v=l7-bE4pBOZE&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=4"
+    }
+  ]
+};
 
 export const businessLanguages = [
   { code: "en", flag: "🇺🇸", name: "English" },
@@ -257,26 +323,26 @@ export const businessVideos = [
   },
 ];
 
-export const ceoVideos = [
-  {
-    title: "Welcome Message",
-    desc: "Personal welcome from our CEO introducing Rentelligence vision and mission.",
-    img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
-    duration: "4:30",
-  },
-  {
-    title: "Our Vision for AI Future",
-    desc: "Deep dive into our vision for artificial intelligence and the future of technology.",
-    img: "https://readdy.ai/api/search-image?query=CEO%20vision%20presentation%20video%20with%20futuristic%20AI%20technology%20backdrop%2C%20executive%20discussing%20artificial%20intelligence%20future%2C%20professional%20leadership%20video%20with%20innovative%20tech%20visuals%20and%20holographic%20elements&width=400&height=225&seq=ceo-vision&orientation=landscape",
-    duration: "6:15",
-  },
-  {
-    title: "Leadership Philosophy",
-    desc: "Our CEO shares leadership principles and management philosophy that drives our success.",
-    img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20leadership%20video%20with%20team%20collaboration%20background%2C%20executive%20discussing%20leadership%20philosophy%2C%20corporate%20management%20presentation%20with%20inspiring%20business%20environment&width=400&height=225&seq=ceo-leadership&orientation=landscape",
-    duration: "5:45",
-  },
-];
+// export const ceoVideos = [
+//   {
+//     title: "Welcome Message",
+//     desc: "Personal welcome from our CEO introducing Rentelligence vision and mission.",
+//     img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+//     duration: "4:30",
+//   },
+//   {
+//     title: "Our Vision for AI Future",
+//     desc: "Deep dive into our vision for artificial intelligence and the future of technology.",
+//     img: "https://readdy.ai/api/search-image?query=CEO%20vision%20presentation%20video%20with%20futuristic%20AI%20technology%20backdrop%2C%20executive%20discussing%20artificial%20intelligence%20future%2C%20professional%20leadership%20video%20with%20innovative%20tech%20visuals%20and%20holographic%20elements&width=400&height=225&seq=ceo-vision&orientation=landscape",
+//     duration: "6:15",
+//   },
+//   {
+//     title: "Leadership Philosophy",
+//     desc: "Our CEO shares leadership principles and management philosophy that drives our success.",
+//     img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20leadership%20video%20with%20team%20collaboration%20background%2C%20executive%20discussing%20leadership%20philosophy%2C%20corporate%20management%20presentation%20with%20inspiring%20business%20environment&width=400&height=225&seq=ceo-leadership&orientation=landscape",
+//     duration: "5:45",
+//   },
+// ];
 
 export const modules = [
   {

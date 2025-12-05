@@ -1,6 +1,7 @@
+
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   RiArrowLeftLine,
   RiUserStarLine,
@@ -15,11 +16,97 @@ import {
 import { ceoVideos } from "@/app/constant/constant";
 import VideoPopUp from "@/app/components/VideoPopUp";
 import Link from "next/link";
+import { Languages } from "@/app/constant/constant";
 import Image from "next/image";
 
 const CeoMessage = () => {
   const [activeTab, setActiveTab] = useState("written");
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [selectlanguages, setSelectLanguages] = useState(Languages);
+  const [currentVideos, setCurrentVideos] = useState([]);
+
+  const getActiveLanguage = () => {
+    const activeLang = selectlanguages.find(lang => lang.active);
+    return activeLang || Languages[0];
+  };
+
+  const getLanguageCode = (label) => {
+    const langMap = {
+      "English": "en",
+      "Hindi": "hi",
+      "German": "de",
+      "Russian": "ru",
+      "Arabic": "ar",
+      "Spanish": "es"
+    };
+    return langMap[label] || "en";
+  };
+
+  // Extract YouTube ID from URL
+  const extractYouTubeId = (url) => {
+    if (!url) return null;
+
+    try {
+      // For standard YouTube URLs like https://www.youtube.com/watch?v=VIDEO_ID
+      if (url.includes("youtube.com/watch")) {
+        const urlObj = new URL(url);
+        return urlObj.searchParams.get("v");
+      }
+
+      // For shortened YouTube URLs like https://youtu.be/VIDEO_ID
+      if (url.includes("youtu.be/")) {
+        const parts = url.split("/");
+        return parts[parts.length - 1]?.split("?")[0];
+      }
+
+      return null;
+    } catch (error) {
+      console.error("Error extracting YouTube ID:", error);
+      return null;
+    }
+  };
+
+  const handleLanguageClick = (index) => {
+    const updatedLanguages = selectlanguages.map((lang, idx) => ({
+      ...lang,
+      active: idx === index,
+    }));
+    setSelectLanguages(updatedLanguages);
+  };
+
+  // Update videos when language changes
+  useEffect(() => {
+    const activeLang = getActiveLanguage();
+    const langCode = getLanguageCode(activeLang.label);
+
+    if (ceoVideos[langCode]) {
+      setCurrentVideos(ceoVideos[langCode]);
+    } else {
+      // Fallback to English if language videos not available
+      setCurrentVideos(ceoVideos.en || []);
+    }
+  }, [selectlanguages]);
+
+  // Initialize videos on component mount
+  useEffect(() => {
+    const activeLang = getActiveLanguage();
+    const langCode = getLanguageCode(activeLang.label);
+
+    if (ceoVideos[langCode]) {
+      setCurrentVideos(ceoVideos[langCode]);
+    } else {
+      setCurrentVideos(ceoVideos.en || []);
+    }
+  }, []);
+
+  // Handle video click - add youtubeId to video object
+  const handleVideoClick = (video) => {
+    const videoWithYoutubeId = {
+      ...video,
+      youtubeId: extractYouTubeId(video.videoUrl)
+    };
+    setSelectedVideo(videoWithYoutubeId);
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
@@ -32,10 +119,9 @@ const CeoMessage = () => {
           <RiArrowLeftLine className="mr-2" />
           Back to Media Kit
         </Link>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">CEO Message</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Pace</h1>
         <p className="text-xl text-gray-600">
-          Personal insights from our leadership on vision, innovation, and
-          excellence
+          Empowering innovation through AI-driven productivity solutions
         </p>
       </div>
 
@@ -48,9 +134,9 @@ const CeoMessage = () => {
               <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <RiUserStarLine className="text-5xl" />
               </div>
-              <h2 className="text-3xl font-bold mb-2">CEO Message Center</h2>
+              <h2 className="text-3xl font-bold mb-2">Pace Leadership Center</h2>
               <p className="text-indigo-100">
-                Leadership insights and company vision
+                Insights on productivity, innovation, and AI transformation
               </p>
             </div>
           </div>
@@ -62,7 +148,7 @@ const CeoMessage = () => {
             {/* About Section */}
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                About Our Leadership
+                About Pace Leadership
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -71,10 +157,10 @@ const CeoMessage = () => {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">
-                      Visionary Leadership
+                      Productivity Excellence
                     </p>
                     <p className="text-gray-600 text-sm">
-                      Pioneering the future of AI technology
+                      Revolutionizing work efficiency through AI
                     </p>
                   </div>
                 </div>
@@ -85,10 +171,10 @@ const CeoMessage = () => {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">
-                      Innovation Focus
+                      AI Innovation
                     </p>
                     <p className="text-gray-600 text-sm">
-                      Commitment to breakthrough solutions
+                      Creating intelligent workflow solutions
                     </p>
                   </div>
                 </div>
@@ -98,9 +184,9 @@ const CeoMessage = () => {
                     <RiTeamLine className="text-indigo-600 text-sm" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">People-Centric</p>
+                    <p className="font-medium text-gray-900">Future of Work</p>
                     <p className="text-gray-600 text-sm">
-                      Empowering teams and communities
+                      Shaping how teams collaborate and succeed
                     </p>
                   </div>
                 </div>
@@ -110,18 +196,15 @@ const CeoMessage = () => {
             {/* Key Message Section */}
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Key Messages
+                Leadership Vision
               </h3>
               <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-200">
                 <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-                  &quot;At Rentelligence, we believe in empowering the future through
-                  AI innovation. Our mission is to make artificial intelligence
-                  accessible, practical, and transformative for businesses
-                  worldwide.&quot;
+                  &quot;At Pace, we are dedicated to transforming productivity through AI-powered solutions. Our mission is to make intelligent workflow automation accessible to every team, enabling unprecedented levels of efficiency and innovation.&quot;
                 </blockquote>
                 <div className="mt-4 text-right">
                   <p className="text-indigo-600 font-semibold">
-                    — CEO, Rentelligence
+                    — Leadership Team, Pace
                   </p>
                 </div>
               </div>
@@ -136,21 +219,19 @@ const CeoMessage = () => {
           <nav className="flex">
             <button
               onClick={() => setActiveTab("video")}
-              className={`px-6 py-4 text-sm font-medium transition-colors cursor-pointer flex items-center ${
-                activeTab === "video"
+              className={`px-6 py-4 text-sm font-medium transition-colors cursor-pointer flex items-center ${activeTab === "video"
                   ? "text-indigo-600 border-b-2 border-indigo-600 bg-indigo-50"
                   : "text-gray-500 hover:text-gray-700"
-              }`}
+                }`}
             >
               <RiVideoLine className="mr-2" /> Video Messages
             </button>
             <button
               onClick={() => setActiveTab("written")}
-              className={`px-6 py-4 text-sm font-medium transition-colors cursor-pointer flex items-center ${
-                activeTab === "written"
+              className={`px-6 py-4 text-sm font-medium transition-colors cursor-pointer flex items-center ${activeTab === "written"
                   ? "text-indigo-600 border-b-2 border-indigo-600 bg-indigo-50"
                   : "text-gray-500 hover:text-gray-700"
-              }`}
+                }`}
             >
               <RiArticleLine className="mr-2" /> Written Messages
             </button>
@@ -160,54 +241,104 @@ const CeoMessage = () => {
         {/* Tab Content */}
         <div className="p-8">
           {activeTab === "video" && (
-            <div className="p-4">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {ceoVideos.map((video, index) => (
-                  <div
-                    key={index}
-                    className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all group"
-                  >
-                    {/* Thumbnail */}
-                    <div className="relative">
-                      <Image
-                        src={video.img}
-                        alt={video.title}
-                        width={50}
-                        height={50}
-                        className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                      />
+            <div className="space-y-8">
+              {/* Language Selection */}
+              <div className="bg-white rounded-2xl p-6 border border-gray-200">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Select Language
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                  {selectlanguages.map((lang, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleLanguageClick(idx)}
+                      className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${lang.active
+                          ? "border-purple-500 bg-purple-50"
+                          : "border-gray-200 hover:border-purple-300"
+                        }`}
+                    >
+                      <div className="text-center">
+                        <div className="text-2xl mb-2">{lang.flag}</div>
+                        <p className="font-medium text-sm text-gray-900">
+                          {lang.label}
+                        </p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-                      {/* Hover Overlay with Play Icon */}
-                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
-                        <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                          <RiPlayFill className="text-white text-2xl ml-1" />
+              {/* Video Grid */}
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Pace Video Messages in {getActiveLanguage().label}
+                </h3>
+
+                {currentVideos.length > 0 ? (
+                  <div className="">
+                    {currentVideos.map((video, index) => (
+                      <div
+                        key={index}
+                        className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all group h-full flex flex-col min-h-[400px]"
+                      >
+                        <div className="relative flex-shrink-0">
+                          <Image
+                            src={video.img}
+                            alt={video.title}
+                            width={450}
+                            height={300}
+                            className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-300"
+                          />
+
+                          {/* Hover Overlay with Play Icon */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                            <div className="w-20 h-20 bg-white/25 backdrop-blur-md rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                              <RiPlayFill className="text-white text-3xl ml-1.5" />
+                            </div>
+                          </div>
+
+                          {/* Video Duration */}
+                          <div className="absolute bottom-4 right-4 bg-black/85 backdrop-blur-sm rounded-lg px-3 py-1.5">
+                            <span className="text-white text-sm font-semibold">
+                              {video.duration}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="p-6 flex flex-col justify-between h-full">
+                          <div>
+                            <h3 className="text-lg font-semibold text-gray-900 line-clamp-2 leading-tight mb-2">
+                              {video.title}
+                            </h3>
+                            <p className="text-gray-600 text-sm line-clamp-3">
+                              {video.desc}
+                            </p>
+                          </div>
+
+                          <div className="mt-6">
+                            <button
+                              className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 px-4 rounded-lg hover:shadow-xl transition-all text-sm font-medium whitespace-nowrap cursor-pointer"
+                              onClick={() => handleVideoClick(video)}
+                            >
+                              <RiPlayLine className="inline-block mr-2 text-base" />
+                              Watch in {getActiveLanguage().label}
+                            </button>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Video Duration */}
-                      <div className="absolute bottom-3 right-3 bg-black/70 backdrop-blur-sm rounded px-2 py-1">
-                        <span className="text-white text-sm font-medium">
-                          {video.duration}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Card Content */}
-                    <div className="p-6">
-                      <h3 className="text-lg  font-medium  text-gray-900 mb-2">
-                        {video.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm mb-4">{video.desc}</p>
-                      <button 
-                        className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2 px-4 rounded-lg hover:shadow-lg transition-all text-sm whitespace-nowrap cursor-pointer"
-                        onClick={() => setSelectedVideo(video)}
-                      >
-                        <RiPlayLine className="inline-block mr-1" />
-                        Watch Message
-                      </button>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                ) : (
+                  <div className="text-center py-12 bg-gray-50 rounded-lg">
+                    <p className="text-gray-500 text-lg">
+                      No videos available in {getActiveLanguage().label} at the moment.
+                    </p>
+                    <p className="text-gray-400 mt-2">
+                      Please select another language or check back later.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           )}
@@ -272,9 +403,9 @@ const CeoMessage = () => {
       </div>
 
       {/* Video Popup */}
-      <VideoPopUp 
-        video={selectedVideo} 
-        onClose={() => setSelectedVideo(null)} 
+      <VideoPopUp
+        video={selectedVideo}
+        onClose={() => setSelectedVideo(null)}
       />
     </div>
   );

@@ -37,15 +37,15 @@ export default function Header() {
             <Link href="/" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Home
             </Link>
-            <button className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="https://rentelligence.ai/service" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Resources
-            </button>
-            <button className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            </Link>
+            <Link href="https://rentelligence.ai/service"className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Apps
-            </button>
-            <button className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            </Link>
+            <Link href="https://rentelligence.ai/service" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Social
-            </button>
+            </Link>
 
             <div className="h-6 w-px bg-gray-300 opacity-50"></div>
 
