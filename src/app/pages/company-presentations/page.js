@@ -10,18 +10,26 @@ import {
   RiDownloadLine,
   RiEyeLine,
   RiInformationLine,
+  RiLoader4Line,
 } from "react-icons/ri";
 import { useState } from "react";
 import Link from "next/link";
 
 const CompanyPresentations = () => {
   const [selectlanguages, setSelectLanguages] = useState(languages);
+  // Loading states for each presentation card
+  const [isDownloadingInvestor, setIsDownloadingInvestor] = useState(false);
+  const [isPreviewingInvestor, setIsPreviewingInvestor] = useState(false);
+  const [isDownloadingOverview, setIsDownloadingOverview] = useState(false);
+  const [isPreviewingOverview, setIsPreviewingOverview] = useState(false);
+  const [isDownloadingShowcase, setIsDownloadingShowcase] = useState(false);
+  const [isPreviewingShowcase, setIsPreviewingShowcase] = useState(false);
 
   const handleLanguageClick = (index) => {
     setSelectLanguages((prev) =>
       prev.map((lang, idx) => ({
         ...lang,
-        active: idx === index, 
+        active: idx === index,
       }))
     );
   };
@@ -29,7 +37,88 @@ const CompanyPresentations = () => {
   // Get the currently selected language
   const getActiveLanguage = () => {
     const activeLang = selectlanguages.find(lang => lang.active);
-    return activeLang || languages[0]; 
+    return activeLang || languages[0];
+  };
+
+  // Handle download for Investor Pitch Deck
+  const handleDownloadInvestor = async () => {
+    if (getActiveLanguage().label === 'English') {
+      setIsDownloadingInvestor(true);
+      // Simulate loading delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      const link = document.createElement('a');
+      link.href = 'https://app.rentelligence.ai/Rentall.pdf';
+      link.download = 'Investor_Pitch_Deck.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setIsDownloadingInvestor(false);
+    }
+  };
+
+  // Handle preview for Investor Pitch Deck
+  const handlePreviewInvestor = async () => {
+    if (getActiveLanguage().label === 'English') {
+      setIsPreviewingInvestor(true);
+      // Simulate loading delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      window.open('https://app.rentelligence.ai/Rentall.pdf', '_blank');
+      setIsPreviewingInvestor(false);
+    }
+  };
+
+  // Handle download for Company Overview
+  const handleDownloadOverview = async () => {
+    if (getActiveLanguage().label === 'English') {
+      setIsDownloadingOverview(true);
+      // Simulate loading delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      const link = document.createElement('a');
+      link.href = 'https://app.rentelligence.ai/Rentall.pdf';
+      link.download = 'Company_Overview.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setIsDownloadingOverview(false);
+    }
+  };
+
+  // Handle preview for Company Overview
+  const handlePreviewOverview = async () => {
+    if (getActiveLanguage().label === 'English') {
+      setIsPreviewingOverview(true);
+      // Simulate loading delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      // window.open('https://app.rentelligence.ai/Rentall.pdf', '_blank');
+      setIsPreviewingOverview(false);
+    }
+  };
+
+  // Handle download for Product Showcase
+  const handleDownloadShowcase = async () => {
+    if (getActiveLanguage().label === 'English') {
+      setIsDownloadingShowcase(true);
+      // Simulate loading delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      const link = document.createElement('a');
+      // link.href = 'https://app.rentelligence.ai/Rentall.pdf';
+      link.download = 'Product_Showcase.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setIsDownloadingShowcase(false);
+    }
+  };
+
+  // Handle preview for Product Showcase
+  const handlePreviewShowcase = async () => {
+    if (getActiveLanguage().label === 'English') {
+      setIsPreviewingShowcase(true);
+      // Simulate loading delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      // window.open('https://app.rentelligence.ai/Rentall.pdf', '_blank');
+      setIsPreviewingShowcase(false);
+    }
   };
 
   return (
@@ -61,11 +150,10 @@ const CompanyPresentations = () => {
               <button
                 key={idx}
                 onClick={() => handleLanguageClick(idx)}
-                className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
-                  lang.active
+                className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${lang.active
                     ? "border-purple-500 bg-purple-50"
                     : "border-gray-200 hover:border-purple-300"
-                }`}
+                  }`}
               >
                 <div className="text-center">
                   <div className="text-2xl mb-2">{lang.flag}</div>
@@ -102,13 +190,13 @@ const CompanyPresentations = () => {
                 opportunity, business model, and growth projections.
               </p>
               <div className="space-y-3">
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all whitespace-nowrap cursor-pointer">
-                  <RiDownloadLine className="mr-2 inline" />
-                  Download in {getActiveLanguage().label}
+                <button onClick={handleDownloadInvestor} disabled={isDownloadingInvestor} className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isDownloadingInvestor ? <RiLoader4Line className="mr-2 inline animate-spin" /> : <RiDownloadLine className="mr-2 inline" />}
+                  {isDownloadingInvestor ? 'Downloading...' : `Download in ${getActiveLanguage().label}`}
                 </button>
-                <button className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer">
-                  <RiEyeLine className="mr-2 inline" />
-                  Preview
+                <button onClick={handlePreviewInvestor} disabled={isPreviewingInvestor} className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isPreviewingInvestor ? <RiLoader4Line className="mr-2 inline animate-spin" /> : <RiEyeLine className="mr-2 inline" />}
+                  {isPreviewingInvestor ? 'Loading...' : 'Preview'}
                 </button>
               </div>
             </div>
@@ -136,13 +224,13 @@ const CompanyPresentations = () => {
                 services, and achievements.
               </p>
               <div className="space-y-3">
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all whitespace-nowrap cursor-pointer">
-                  <RiDownloadLine className="mr-2 inline" />
-                  Download in {getActiveLanguage().label}
+                <button onClick={handleDownloadOverview} disabled={isDownloadingOverview} className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isDownloadingOverview ? <RiLoader4Line className="mr-2 inline animate-spin" /> : <RiDownloadLine className="mr-2 inline" />}
+                  {isDownloadingOverview ? 'Downloading...' : `Download in ${getActiveLanguage().label}`}
                 </button>
-                <button className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer">
-                  <RiEyeLine className="mr-2 inline" />
-                  Preview
+                <button onClick={handlePreviewOverview} disabled={isPreviewingOverview} className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isPreviewingOverview ? <RiLoader4Line className="mr-2 inline animate-spin" /> : <RiEyeLine className="mr-2 inline" />}
+                  {isPreviewingOverview ? 'Loading...' : 'Preview'}
                 </button>
               </div>
             </div>
@@ -170,13 +258,13 @@ const CompanyPresentations = () => {
                 competitive advantages.
               </p>
               <div className="space-y-3">
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all whitespace-nowrap cursor-pointer">
-                  <RiDownloadLine className="mr-2 inline" />
-                  Download in {getActiveLanguage().label}
+                <button onClick={handleDownloadShowcase} disabled={isDownloadingShowcase} className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isDownloadingShowcase ? <RiLoader4Line className="mr-2 inline animate-spin" /> : <RiDownloadLine className="mr-2 inline" />}
+                  {isDownloadingShowcase ? 'Downloading...' : `Download in ${getActiveLanguage().label}`}
                 </button>
-                <button className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer">
-                  <RiEyeLine className="mr-2 inline" />
-                  Preview
+                <button onClick={handlePreviewShowcase} disabled={isPreviewingShowcase} className="w-full border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                  {isPreviewingShowcase ? <RiLoader4Line className="mr-2 inline animate-spin" /> : <RiEyeLine className="mr-2 inline" />}
+                  {isPreviewingShowcase ? 'Loading...' : 'Preview'}
                 </button>
               </div>
             </div>
