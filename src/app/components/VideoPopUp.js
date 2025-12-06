@@ -57,7 +57,6 @@ const VideoPopUp = ({ video, onClose }) => {
           <div className="space-y-3">
             <p className="text-gray-600">{video.desc}</p>
             <div className="flex items-center space-x-4 text-sm text-gray-500">
-              <span>Duration: {video.duration}</span>
               {video.views && <span>Views: {video.views}</span>}
               {video.category && (
                 <span className="capitalize">Category: {video.category}</span>

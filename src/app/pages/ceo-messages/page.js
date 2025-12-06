@@ -291,7 +291,8 @@ const CeoMessage = () => {
                           />
 
                           {/* Hover Overlay with Play Icon */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                          onClick={() => handleVideoClick(video)}>
                             <div className="w-20 h-20 bg-white/25 backdrop-blur-md rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
                               <RiPlayFill className="text-white text-3xl ml-1.5" />
                             </div>
