@@ -78,30 +78,20 @@ export default function PromotionalVideos() {
                 <Image
                   src={video.img}
                   alt={video.title}
-                  width={50}
-                  height={50}
+                  width={200}
+                  height={200}
                   className="w-full h-48  object-cover object-top group-hover:scale-105 transition-transform duration-300 cursor-pointer"
                   onClick={() => {
-                    console.log("Video clicked:", video.title);
                     setSelectedVideo(video);
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+                onClick={() => {
+                      setSelectedVideo(video);
+                    }}>
                   <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <RiPlayFill className="text-white text-2xl ml-1" />
-                  </div>
-                </div>
-                <div className="absolute bottom-3 left-3 right-3 flex justify-between items-end">
-                  <div className="bg-black/70 backdrop-blur-sm rounded px-2 py-1">
-                    <span className="text-white text-sm font-medium">
-                      {video.duration}
-                    </span>
-                  </div>
-                  <div className="bg-black/70 backdrop-blur-sm rounded px-2 py-1">
-                    <span className="text-white text-sm">
-                      {video.views} views
-                    </span>
                   </div>
                 </div>
               </div>

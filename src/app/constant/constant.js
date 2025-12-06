@@ -13,8 +13,9 @@ import {
   RiHdLine,
   RiDownloadCloudLine,
   RiUserStarLine,
+  RiTeamLine
 } from "react-icons/ri";
-import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaFacebookF, FaXTwitter,FaYoutube } from "react-icons/fa6";
 import { FaClosedCaptioning } from "react-icons/fa";
 
 export const highlights = [
@@ -99,6 +100,14 @@ export const links = [
     gradient: "from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800",
     textColor: "text-blue-100",
   },
+   {
+  name: "YouTube",
+  desc: "Subscribe to our channel",
+  href: "https://www.youtube.com/@rentelligenceai",
+  icon: <FaYoutube className="text-white text-2xl" />,
+  gradient: "from-red-600 to-red-700 hover:from-red-700 hover:to-red-800",
+  textColor: "text-red-100",
+},
   {
     name: "X (Twitter)",
     desc: "Latest updates",
@@ -125,58 +134,76 @@ export const certificateDetails = [
 ];
 export const videos = [
   {
-    title: "AI Revolution with Rentelligence",
-    desc: "Discover how Rentelligence is revolutionizing industries with cutting-edge AI technology.",
-    img: "https://img.youtube.com/vi/abc123def45/maxresdefault.jpg",
-    youtubeId: "abc123def45",
-    duration: "2:30",
-    views: "15.2K",
-    category: "demos",
+    title: "Top 10 AI Tools",
+    desc: "Discover the top 10 AI tools that are transforming business operations and driving innovation across industries.A practical guide to the best AI tools for marketing, analytics, customer service, and content creation - complete with real-world use cases and implementation tips.",
+    img: "/100AI.jpg",
+    youtubeId: "XDLThBvNw3U",
+    duration: "0:33",
+    category: "demos"
   },
   {
-    title: "Client Success Story - TechCorp",
-    desc: "See how TechCorp transformed their operations with Rentelligence AI solutions.",
-    img: "https://img.youtube.com/vi/xyz789uvw01/maxresdefault.jpg",
-    youtubeId: "xyz789uvw01",
-    duration: "3:15",
-    views: "8.7K",
+    title: "Earn Up To 220% with AI Agents! ",
+    desc: "Discover how AI Agents can help you achieve up to 220% ROI by automating business processes and increasing operational efficiency. See real case studies showing 3x faster customer response times and 50% reduction in operational errors and AI Demand day by day increase.",
+    img: "/Earnupto.jpg",
+    youtubeId: "cCYrtBtKJOI",
+    duration: "0:17",
     category: "testimonials",
   },
   {
-    title: "Our Innovation Journey",
-    desc: "From startup to industry leader - the Rentelligence innovation story.",
-    img: "https://img.youtube.com/vi/def456ghi78/maxresdefault.jpg",
-    youtubeId: "def456ghi78",
-    duration: "4:45",
-    views: "22.1K",
+    title: "In 20 Years, Robots Will Outnumber Humans? The Shocking Future of Humanoid AI Revealed by Elon Musk",
+    desc: "Elon Musk reveals his startling prediction about humanoid robots surpassing human population in two decades. Explore the implications for society.",
+    img: "/20year.jpg",
+    youtubeId: "ZQK24kYKYfY",
+    duration: "0:32",
     category: "stories",
   },
   {
-    title: "Product Showcase 2024",
-    desc: "Complete overview of our latest AI products and features for 2024.",
-    img: "https://img.youtube.com/vi/jkl012mno34/maxresdefault.jpg",
-    youtubeId: "jkl012mno34",
-    duration: "5:20",
-    views: "31.5K",
+    title: "🔥Amazon Replaces 5 Lakh Employees with AI! The Future of Work is Here 🤖",
+    desc: "Amazon's massive AI overhaul replaces 500,000 jobs with artificial intelligence. Discover which roles are disappearing first, what this means for global employment, and how workers can prepare for the AI-dominated workplace of tomorrow.",
+    img: "/amazonreplace.jpg",
+    youtubeId: "JLfapai9Jfk",
+    duration: "0:19",
     category: "demos",
   },
   {
-    title: "Life at Rentelligence",
-    desc: "Get an inside look at our company culture and what makes our team special.",
-    img: "https://img.youtube.com/vi/pqr345stu67/maxresdefault.jpg",
-    youtubeId: "pqr345stu67",
-    duration: "3:30",
-    views: "12.8K",
+    title: "Rentelligence: World’s 1st Decentralized AI/ML Marketplace | Buy, Lease & Rent AI Agents",
+    desc: "Introducing Rentelligence - the world's first decentralized marketplace for AI and machine learning solutions. Discover how businesses can buy, lease, or rent pre-trained AI agents for any industry need without massive upfront investment.",
+    img: "/worlds.jpg",
+    youtubeId: "BtzB1v7rD80",
+    duration: "0:26",
     category: "culture",
   },
   {
-    title: "Vision for the Future",
-    desc: "Our bold vision for the future of AI and how we plan to get there.",
-    img: "https://img.youtube.com/vi/vwx678yza89/maxresdefault.jpg",
-    youtubeId: "vwx678yza89",
+    title: "AI Replaces Jobs, Rentelligence Creates Opportunities | Future of Work 2027",
+    desc: "While AI eliminates traditional jobs, Rentelligence is creating new opportunities through our AI agent marketplace. Discover how we're building a future where humans collaborate with AI to create higher-value work and universal earning potential.",
+    img: "/replacejob.jpg",
+    youtubeId: "Coo3gRemvOA",
     duration: "2:45",
-    views: "18.9K",
     category: "stories",
+  },
+  {
+    title: "AI Isn’t Just Data — It’s Imagination | Discover Rentelligence.ai",
+    desc: "Move beyond algorithms and datasets. Discover how Rentelligence is redefining AI as a canvas for human creativity and imagination. Where data meets dreams, and artificial intelligence becomes artistic inspiration.",
+    img: "/justreplace.jpg",
+    youtubeId: "CDYEEYy_MzA",
+    duration: "0:17",
+    category: "culture",
+  },
+  {
+    title: "Gibberlink Mode Explained: Game-Changing Feature or Just Hype",
+    desc: "What is Gibberlink Mode and why is everyone talking about it?In this video, we break down Gibberlink Mode Explained — its purpose, features, real-world use cases, and whether it's worth enabling.If you're curious about performance enhancements, hidden features.",
+    img: "/gibber.jpg",
+    youtubeId: "Ri4DFDtqbBY",
+    duration: "0:58",
+    category: "testimonials",
+  },
+  {
+    title: "75,000 Robots Working at Amazon! Will They Replace Humans? Robots to Run Their Warehouses!",
+    desc: "Amazon has officially deployed over 75,000 robots across its warehouses — and this technology is transforming the future of eCommerce, logistics.",
+    img: "/amazon.jpg",
+    youtubeId: "JGyLoqJhGmE",
+    duration: "0:22",
+    category: "testimonials",
   },
 ];
 
@@ -212,8 +239,16 @@ export const ceoVideos = {
       title: "Conceptual Understanding of Rentelligence and PACE | Complete Framework Explained in English",
       desc: "Learn about the complete framework and conceptual understanding of Rentelligence and PACE",
       duration: "06:35",
-      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      img: "/pace-english.jpg",
       videoUrl: "https://www.youtube.com/watch?v=qz-SmV0VzLA"
+    },
+
+    {
+      title: "Glimpses and Reviews from the first PACE Level 1 program in Lucknow India 🇮🇳",
+      desc: "Watch highlights and participant reviews from the inaugural PACE Level 1 training program held in Lucknow, India. See firsthand experiences and feedback from attendees.",
+      duration: "02:22",
+      img: "/lkopace.jpg",
+      videoUrl: "https://youtu.be/_XwnbglDJFI?si=4uMNMsFV3Bq1IfX6"
     },
   ],
   hi: [
@@ -221,7 +256,7 @@ export const ceoVideos = {
       title: "Rentelligence और PACE की संकल्पनात्मक समझ | Complete Concept Explained in Hindi",
       desc: "Rentelligence और PACE की पूरी अवधारणा और ढांचे को समझें",
       duration: "07:39",
-      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      img: "/pace-hindi.jpg",
       videoUrl: "https://www.youtube.com/watch?v=sW5eNoTO5D0&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=6"
     },
   ],
@@ -230,7 +265,7 @@ export const ceoVideos = {
       title: "الفهم المفاهيمي لـ Rentelligence و PACE | شرح شامل بطريقة مبسّطة",
       desc: "تعرف على الإطار الكامل والفهم المفاهيمي لـ Rentelligence و PACE",
       duration: "07:32",
-      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      img: "/pace-arabic.jpg",
       videoUrl: "https://www.youtube.com/watch?v=4FUyDTriCXQ&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=5"
     },
   ],
@@ -239,7 +274,7 @@ export const ceoVideos = {
       title: "Konzeptuelles Verständnis von Rentelligence und PACE | Klare Erklärung für Anfänger",
       desc: "Ein vollständiges Verständnis des Rentelligence- und PACE-Rahmens und der zugrunde liegenden Konzepte",
       duration: "06:49",
-      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      img: "/pace-german.jpg",
       videoUrl: "https://www.youtube.com/watch?v=qG2ufD1--0I&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm"
     }
   ],
@@ -248,7 +283,7 @@ export const ceoVideos = {
       title: "Концептуальное понимание Rentelligence и PACE | Полный разбор системы и возможностей",
       desc: "Изучение структуры и концептуального понимания Rentelligence и PACE",
       duration: "07:24",
-      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      img: "/pace-russian.jpg",
       videoUrl: "https://www.youtube.com/watch?v=ZpozDmGgjHg&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=3"
     }
   ],
@@ -257,7 +292,7 @@ export const ceoVideos = {
       title: "Comprensión Conceptual de Rentelligence y PACE | Marco Completo Explicado",
       desc: "Aprende sobre el marco completo y la comprensión conceptual de Rentelligence y PACE",
       duration: "07:24",
-      img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
+      img: "/pace-spanish.jpg",
       videoUrl: "https://www.youtube.com/watch?v=l7-bE4pBOZE&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=4"
     }
   ]
@@ -274,54 +309,98 @@ export const businessLanguages = [
 
 export const businessVideos = [
   {
-    title: "Business Model Explanation",
-    desc: "Comprehensive overview of Rentelligence business model and revenue streams.",
-    duration: "12:45",
-    lang: ["es", "hi", "zh", "ar", "th", "en"],
-    img: "/BusinessImages/BusinessModel.jpg",
-    youtubeId: "dQw4w9WgXcQ", // 👈 add this
-  },
-  {
-    title: "Market Analysis & Opportunity",
-    desc: "Deep dive into market size, competitive landscape, and growth opportunities.",
-    duration: "15:30",
-    lang: ["es", "hi", "zh", "ar", "th", "en"],
-    img: "/BusinessImages/MarketAnalytics.jpg",
-    youtubeId: "kXYiU_JCYtU",
-  },
-  {
-    title: "Financial Projections",
-    desc: "Detailed financial forecasts, projections, and investment requirements.",
-    duration: "10:20",
-    lang: ["es", "hi", "zh", "ar", "th", "en"],
-    img: "/BusinessImages/financial Project.jpg",
-    youtubeId: "JGwWNGJdvx8",
-  },
-  {
-    title: "Team & Leadership",
-    desc: "Introduction to key team members, advisors, and leadership expertise.",
-    duration: "8:15",
-    lang: ["es", "hi", "zh", "ar", "th", "en"],
-    img: "/BusinessImages/Team.jpg",
-    youtubeId: "3JZ_D3ELwOQ",
-  },
-  {
-    title: "Technology & Innovation",
-    desc: "Overview of AI technology stack, innovation approach, and technical advantages.",
-    duration: "14:10",
-    lang: ["es", "hi", "zh", "ar", "th", "en"],
-    img: "/BusinessImages/Technonlogy.jpg",
-    youtubeId: "9bZkp7q19f0",
-  },
-  {
-    title: "Success Stories & Case Studies",
-    desc: "Real client success stories and case studies demonstrating our impact.",
-    duration: "11:45",
-    lang: ["es", "hi", "zh", "ar", "th", "en"],
-    img: "/BusinessImages/SuccessStory.jpg",
-    youtubeId: "tVj0ZTS4WF4",
-  },
+  
+  desc: "Comprehensive overview of Rentelligence business model and revenue streams.",
+  lang: ["es", "hi", "zh", "ar", "th", "en"],
+  
+  // Har language ka alag data
+  languages: {
+    en: {
+      title: "Business Model Explanation",
+      youtubeId: "yOtw9rlp2_o",
+      img: "/bussinessmodal.jpg", // English image
+      duration: "4:30",
+      desc: "Comprehensive overview of Rentelligence business model and revenue streams." // Optional: alag description
+    },
+    hi: {
+      title: "व्यापार मॉडल स्पष्टीकरण",
+      youtubeId: "D5fbn5nfJ5E",
+      img: "/bussinessmodalhindi.jpg", 
+      duration: "12:39", 
+      desc: "रेंटेलिजेंस बिजनेस मॉडल और राजस्व धाराओं का व्यापक अवलोकन।"
+    },
+   es: {
+      title: "Explicación del Modelo de Negocio", // Spanish title
+      youtubeId: "yOtw9rlp2_o",
+      img: "/bussinessmodal.jpg",
+      duration: "4:30",
+      desc: "Descripción general del modelo de negocio y flujos de ingresos de Rentelligence."
+    },
+    zh: {
+      title: "商业模式说明", // Chinese title
+      youtubeId: "yOtw9rlp2_o",
+      img: "/bussinessmodal.jpg",
+      duration: "4:30",
+      desc: "Rentelligence商业模式和收入流的全面概述。"
+    },
+    ar: {
+      title: "شرح نموذج العمل", // Arabic title
+      youtubeId: "yOtw9rlp2_o",
+      img: "/bussinessmodal.jpg",
+      duration: "4:30",
+      desc: "نظرة شاملة لنموذج عمل Rentelligence ومسارات الإيرادات."
+    },
+    th: {
+      title: "คำอธิบายโมเดลธุรกิจ", // Thai title
+      youtubeId: "yOtw9rlp2_o",
+      img: "/bussinessmodal.jpg",
+      duration: "4:30",
+      desc: "ภาพรว"
+  }
+},
+  }
 ];
+  // {
+  //   title: "Market Analysis & Opportunity",
+  //   desc: "Deep dive into market size, competitive landscape, and growth opportunities.",
+  //   duration: "15:30",
+  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
+  //   img: "/BusinessImages/MarketAnalytics.jpg",
+  //   youtubeId: "kXYiU_JCYtU",
+  // },
+  // {
+  //   title: "Financial Projections",
+  //   desc: "Detailed financial forecasts, projections, and investment requirements.",
+  //   duration: "10:20",
+  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
+  //   img: "/BusinessImages/financial Project.jpg",
+  //   youtubeId: "JGwWNGJdvx8",
+  // },
+  // {
+  //   title: "Team & Leadership",
+  //   desc: "Introduction to key team members, advisors, and leadership expertise.",
+  //   duration: "8:15",
+  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
+  //   img: "/BusinessImages/Team.jpg",
+  //   youtubeId: "3JZ_D3ELwOQ",
+  // },
+  // {
+  //   title: "Technology & Innovation",
+  //   desc: "Overview of AI technology stack, innovation approach, and technical advantages.",
+  //   duration: "14:10",
+  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
+  //   img: "/BusinessImages/Technonlogy.jpg",
+  //   youtubeId: "9bZkp7q19f0",
+  // },
+  // {
+  //   title: "Success Stories & Case Studies",
+  //   desc: "Real client success stories and case studies demonstrating our impact.",
+  //   duration: "11:45",
+  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
+  //   img: "/BusinessImages/SuccessStory.jpg",
+  //   youtubeId: "tVj0ZTS4WF4",
+  // },
+
 
 // export const ceoVideos = [
 //   {
@@ -353,14 +432,9 @@ export const modules = [
       {
         title: "Basic User Registration",
         desc: "Step-by-step guide to registering new users",
-        duration: "5:30",
-        img: "https://readdy.ai/api/search-image?query=User%20registration%20tutorial%20video%20thumbnail%20with%20signup%20form%20interface%2C%20CRM%20registration%20process%20demonstration%2C%20professional%20training%20video%20about%20user%20onboarding%20with%20modern%20UI%20elements&width=400&height=225&seq=reg-basic&orientation=landscape",
-      },
-      {
-        title: "Account Verification Process",
-        desc: "How to verify user accounts and documents",
-        duration: "3:45",
-        img: "https://readdy.ai/api/search-image?query=Account%20verification%20tutorial%20video%20with%20document%20validation%20interface%2C%20professional%20training%20content%20about%20identity%20verification%2C%20CRM%20verification%20process%20demonstration%20with%20security%20elements&width=400&height=225&seq=reg-verify&orientation=landscape",
+        duration: "1:06",
+        img: "/userregistration.jpg",
+        videoUrl:"https://youtu.be/a9xZjQj-R6Y?si=LM6Wac6HwQ8bAPcd"
       },
     ],
   },
@@ -375,12 +449,6 @@ export const modules = [
         duration: "4:10",
         img: "https://via.placeholder.com/400x225",
       },
-      {
-        title: "Two-Factor Setup",
-        desc: "Enable 2FA for security",
-        duration: "6:05",
-        img: "https://via.placeholder.com/400x225",
-      },
     ],
   },
   {
@@ -391,14 +459,9 @@ export const modules = [
       {
         title: "Deposit via Bank",
         desc: "Using bank transfer",
-        duration: "5:00",
-        img: "https://via.placeholder.com/400x225",
-      },
-      {
-        title: "Deposit via UPI",
-        desc: "Quick UPI payments",
-        duration: "4:20",
-        img: "https://via.placeholder.com/400x225",
+        duration: "1:10",
+        img: "/funddeposit.jpg",
+        videoUrl:"https://youtu.be/giwtPWN4Tk0?si=Z9OeIomtlrHo7bdL"
       },
     ],
   },
@@ -410,14 +473,9 @@ export const modules = [
       {
         title: "Assign Lease Agent",
         desc: "Step-by-step leasing",
-        duration: "7:15",
-        img: "https://via.placeholder.com/400x225",
-      },
-      {
-        title: "Agent Management",
-        desc: "Handle multiple agents",
-        duration: "6:00",
-        img: "https://via.placeholder.com/400x225",
+        duration: "1:54",
+        img: "/leaseagent.jpg",
+        videoUrl:"https://youtu.be/knh6zaDc1bM?si=G8BhEHm4oYrI9NBJ"
       },
     ],
   },
@@ -429,14 +487,9 @@ export const modules = [
       {
         title: "Fund Allocation",
         desc: "Allocate funds properly",
-        duration: "8:10",
-        img: "https://via.placeholder.com/400x225",
-      },
-      {
-        title: "Fund Tracking",
-        desc: "Track all transactions",
-        duration: "5:50",
-        img: "https://via.placeholder.com/400x225",
+        duration: "1:10",
+        img: "/funddeposit.jpg",
+        videoUrl:"https://youtu.be/giwtPWN4Tk0?si=Z9OeIomtlrHo7bdL"
       },
     ],
   },
@@ -451,12 +504,21 @@ export const modules = [
         duration: "9:20",
         img: "https://via.placeholder.com/400x225",
       },
+    ],
+  },
+  {
+    id: "affilate",
+    title: "Affilate & Bussiness Team",
+    icon: <RiTeamLine className="text-xl" />,
+    videos: [
       {
-        title: "Export Data",
-        desc: "Download detailed analytics",
-        duration: "6:30",
-        img: "https://via.placeholder.com/400x225",
+        title: "Business Dashboard & Team Structure Explained",
+        desc: "Analyze team",
+        duration: "1:30",
+        img: "/affilate.jpg",
+        videoUrl:"https://www.youtube.com/watch?v=oR0t15Sc_Pw"
       },
+      
     ],
   },
 ];
