@@ -651,7 +651,6 @@ function MediaResourcesContent() {
   );
 }
 
-// Main component with Suspense boundary
 export default function MediaResources() {
   return (
     <Suspense fallback={

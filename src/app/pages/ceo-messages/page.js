@@ -275,7 +275,7 @@ const CeoMessage = () => {
                 </h3>
 
                 {currentVideos.length > 0 ? (
-                  <div className="">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-4">
                     {currentVideos.map((video, index) => (
                       <div
                         key={index}
