@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 import { MdAppRegistration } from "react-icons/md";
@@ -9,7 +9,48 @@ import Image from 'next/image'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState(''); 
   const router = useRouter();
+
+  const handleSocialClick = () => {
+    setActiveTab('social');
+    setTimeout(() => {
+      const element = document.getElementById('social');
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      } else {
+        window.history.pushState(null, '', '#social');
+        window.dispatchEvent(new HashChangeEvent('hashchange'));
+      }
+    }, 50);
+  };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash === '#social') {
+        setActiveTab('social');
+        setTimeout(() => {
+          const element = document.getElementById('social');
+          if (element) {
+            element.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }, 100);
+      }
+    };
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-lg shadow-lg border-b border-white/20">
@@ -42,11 +83,14 @@ export default function Header() {
             <Link href="https://rentelligence.ai/Career" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Careers
             </Link>
-            <Link href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share"className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Apps
             </Link>
-            <button  className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600"
-            onClick={() => router.push('/home/media-resources?tab=social')}>
+            
+            <button
+              className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600"
+              onClick={handleSocialClick}
+            >
               Social
             </button>
 
@@ -70,16 +114,19 @@ export default function Header() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 space-y-4 flex flex-col items-start">
-            <button className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="https://rentelligence.ai/" className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Home
-            </button>
+            </Link>
             <button className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Resources
             </button>
-            <button className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share" className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Apps
-            </button>
-            <button className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            </Link>
+            <button 
+              onClick={handleSocialClick}
+              className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600"
+            >
               Social
             </button>
 

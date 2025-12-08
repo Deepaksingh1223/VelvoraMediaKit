@@ -100,7 +100,7 @@ const CRMTraining = () => {
               </div>
 
               {/* Progress Bar */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
+              {/* <div className="mt-6 pt-6 border-t border-gray-200">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-gray-700">
                     Progress
@@ -113,7 +113,7 @@ const CRMTraining = () => {
                     style={{ width: "0%" }}
                   ></div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
