@@ -20,7 +20,7 @@ import { Languages } from "@/app/constant/constant";
 import Image from "next/image";
 
 const CeoMessage = () => {
-  const [activeTab, setActiveTab] = useState("written");
+  const [activeTab, setActiveTab] = useState("video");
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [selectlanguages, setSelectLanguages] = useState(Languages);
   const [currentVideos, setCurrentVideos] = useState([]);

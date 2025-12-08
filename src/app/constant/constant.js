@@ -446,22 +446,23 @@ export const modules = [
       {
         title: "Login Steps",
         desc: "Learn secure login",
-        duration: "4:10",
-        img: "https://via.placeholder.com/400x225",
+        duration: "1:06",
+        img: "/userregistration.jpg",
+        videoUrl:"https://youtu.be/a9xZjQj-R6Y?si=LM6Wac6HwQ8bAPcd"
       },
     ],
   },
   {
     id: "deposit",
-    title: "Deposit Funds",
+    title: "Self Deposit Funds",
     icon: <RiMoneyDollarCircleLine className="text-xl" />,
     videos: [
       {
-        title: "Deposit via Bank",
-        desc: "Using bank transfer",
-        duration: "1:10",
-        img: "/funddeposit.jpg",
-        videoUrl:"https://youtu.be/giwtPWN4Tk0?si=Z9OeIomtlrHo7bdL"
+        title: "Self Deposit",
+        desc: "Using Self Deposit",
+        duration: "0:58",
+        img: "/deposit.jpg",
+        videoUrl:"https://www.youtube.com/watch?v=ZSG25_L0-Y0"
       },
     ],
   },
@@ -499,10 +500,11 @@ export const modules = [
     icon: <RiBarChartLine className="text-xl" />,
     videos: [
       {
-        title: "Report Dashboard",
-        desc: "Analyze key reports",
-        duration: "9:20",
-        img: "https://via.placeholder.com/400x225",
+        title: "Analytic",
+        desc: "Understanding reports and analytics for agents in CRM",
+        duration: "2:24",
+        img: "/analytic.jpg",
+        videoUrl:"https://www.youtube.com/watch?v=KwMrOmceO_s"
       },
     ],
   },
