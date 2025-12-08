@@ -170,7 +170,7 @@ function MediaResourcesContent() {
 
                   {/* Legal Certificate Card */}
                   <a
-                    href="http://localhost:3000/pages/legal-certificate"
+                    href="/pages/legal-certificate"
                     className="group block bg-white border-2 border-gray-200 hover:border-emerald-300 hover:shadow-xl rounded-xl p-6 cursor-pointer transition-all duration-300 hover:scale-[1.02] relative overflow-hidden"
                   >
                     <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-50 rounded-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
