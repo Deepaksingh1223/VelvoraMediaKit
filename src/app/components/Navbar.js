@@ -83,7 +83,8 @@ export default function Header() {
             <Link href="https://rentelligence.ai/Career" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Careers
             </Link>
-            <Link href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share" target="_blank"
+                    rel="noopener noreferrer" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
               Apps
             </Link>
             
