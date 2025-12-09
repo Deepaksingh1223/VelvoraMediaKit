@@ -326,10 +326,17 @@ function MediaResourcesContent() {
                   Can&apos;t find what you&apos;re looking for? Contact our team for
                   custom resources.
                 </p>
-                <Link href="https://rentelligence.ai/contact" className="bg-gradient-to-r  from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 ">
+                {/* <Link href="https://rentelligence.ai/contact" className="bg-gradient-to-r  from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 ">
                   <RiCustomerService2Line className="inline mr-2" />
                   Request Custom Resource
-                </Link>
+                </Link> */}
+                <Link 
+  href="https://rentelligence.ai/contact" 
+  className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 md:px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 w-full sm:w-auto text-center inline-flex items-center justify-center"
+>
+  <RiCustomerService2Line className="inline mr-2" />
+  <span className="whitespace-nowrap">Request Custom Resource</span>
+</Link>
               </div>
             </div>
           </div>
