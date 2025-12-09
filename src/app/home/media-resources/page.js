@@ -331,7 +331,7 @@ function MediaResourcesContent() {
                 <Link
                   href="https://rentelligence.ai/contact"
                   className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 md:px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 w-full sm:w-auto text-center inline-flex items-center justify-center"
-                >
+                target="_blank" rel="noopener noreferrer">
                   <RiCustomerService2Line className="inline mr-2" />
                   <span className="whitespace-nowrap">Request Custom Resource</span>
                 </Link>
