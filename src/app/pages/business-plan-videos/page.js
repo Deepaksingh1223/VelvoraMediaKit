@@ -567,52 +567,6 @@ const BusinessPlanVideos = () => {
         </div>
       </div>
 
-      {/* Language Availability Summary */}
-      <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl shadow-lg p-8 mt-8">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Language Availability</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
-          {businessLanguages.map((lang) => {
-            const isAvailable = availableLanguages.includes(lang.code);
-            const isComingSoon = comingSoonLanguages.includes(lang.code);
-            
-            return (
-              <div 
-                key={lang.code}
-                className={`p-4 rounded-lg border text-center ${
-                  isAvailable 
-                    ? "border-green-200 bg-green-50" 
-                    : isComingSoon
-                    ? "border-gray-200 bg-gray-100"
-                    : "border-gray-200 bg-gray-50"
-                }`}
-              >
-                <div className="text-2xl mb-2">{lang.flag}</div>
-                <p className={`font-medium text-sm mb-1 ${
-                  isAvailable ? "text-gray-900" : "text-gray-600"
-                }`}>
-                  {lang.name}
-                </p>
-                <div className={`text-xs px-2 py-1 rounded-full inline-block ${
-                  isAvailable 
-                    ? "bg-green-100 text-green-800" 
-                    : "bg-gray-100 text-gray-600"
-                }`}>
-                  {isAvailable ? "✓ Available" : "Coming Soon"}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        
-        {/* Disabled Languages Info */}
-        <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-          <p className="text-sm text-yellow-800">
-            <span className="font-semibold">Note:</span> Spanish and Thai versions are currently 
-            being prepared and will be available soon. Currently available in English, Hindi, Chinese, and Arabic.
-          </p>
-        </div>
-      </div>
-
       {/* Video Popup */}
       <VideoPopUp
         video={selectedVideo}
