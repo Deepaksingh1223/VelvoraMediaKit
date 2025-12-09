@@ -77,10 +77,12 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="https://rentelligence.ai/" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="https://rentelligence.ai/" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600" target="_blank"
+                    rel="noopener noreferrer">
               Home
             </Link>
-            <Link href="https://rentelligence.ai/Career" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="https://rentelligence.ai/Career" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600" target="_blank"
+                    rel="noopener noreferrer">
               Careers
             </Link>
             <Link href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share" target="_blank"
@@ -115,13 +117,16 @@ export default function Header() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 space-y-4 flex flex-col items-start">
-            <Link href="https://rentelligence.ai/" className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+            <Link href="https://rentelligence.ai/" className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600" target="_blank"
+                    rel="noopener noreferrer">
               Home
             </Link>
-            <button className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
-              Resources
-            </button>
-            <Link href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share" className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600">
+             <Link href="https://rentelligence.ai/Career" className="font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600" target="_blank"
+                    rel="noopener noreferrer">
+              Careers
+            </Link>
+            <Link href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share" className="block w-full text-left font-medium transition-all hover:scale-105 cursor-pointer text-gray-700 hover:text-blue-600" target="_blank"
+                    rel="noopener noreferrer">
               Apps
             </Link>
             <button 
@@ -134,7 +139,7 @@ export default function Header() {
             <Link
               href="https://app.rentelligence.ai/home/register"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 whitespace-nowrap cursor-pointer group"
-            >
+             target="_blank" rel="noopener noreferrer">
               <MdAppRegistration className="inline-block mr-2 group-hover:animate-pulse text-lg" />
               Register Now
             </Link>

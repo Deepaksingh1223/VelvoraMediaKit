@@ -91,6 +91,8 @@ export const links = [
     gradient:
       "from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600",
     textColor: "text-pink-100",
+    target: "_blank",
+    rel:"noopener noreferrer"
   },
   {
     name: "Facebook",
@@ -99,6 +101,8 @@ export const links = [
     icon: <FaFacebookF className="text-white text-2xl" />,
     gradient: "from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800",
     textColor: "text-blue-100",
+    target: "_blank",
+    rel:"noopener noreferrer"
   },
    {
   name: "YouTube",
@@ -107,6 +111,8 @@ export const links = [
   icon: <FaYoutube className="text-white text-2xl" />,
   gradient: "from-red-600 to-red-700 hover:from-red-700 hover:to-red-800",
   textColor: "text-red-100",
+  target: "_blank",
+  rel:"noopener noreferrer"
 },
   {
     name: "X (Twitter)",

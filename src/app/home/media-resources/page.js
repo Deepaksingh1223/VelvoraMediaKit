@@ -111,6 +111,8 @@ function MediaResourcesContent() {
                       <a
                         key={i}
                         href={item.href}
+                        target={item.target}  
+        rel={item.rel} 
                         className={`group flex items-center space-x-4 bg-gradient-to-r ${item.gradient} rounded-xl p-4 transition-all duration-300 hover:scale-[1.02] cursor-pointer`}
                       >
                         <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
