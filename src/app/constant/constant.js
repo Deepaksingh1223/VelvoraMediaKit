@@ -15,7 +15,7 @@ import {
   RiUserStarLine,
   RiTeamLine
 } from "react-icons/ri";
-import { FaInstagram, FaFacebookF, FaXTwitter,FaYoutube } from "react-icons/fa6";
+import { FaInstagram, FaFacebookF, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { FaClosedCaptioning } from "react-icons/fa";
 
 export const highlights = [
@@ -92,7 +92,7 @@ export const links = [
       "from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600",
     textColor: "text-pink-100",
     target: "_blank",
-    rel:"noopener noreferrer"
+    rel: "noopener noreferrer"
   },
   {
     name: "Facebook",
@@ -102,18 +102,18 @@ export const links = [
     gradient: "from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800",
     textColor: "text-blue-100",
     target: "_blank",
-    rel:"noopener noreferrer"
+    rel: "noopener noreferrer"
   },
-   {
-  name: "YouTube",
-  desc: "Subscribe to our channel",
-  href: "https://www.youtube.com/@rentelligenceai",
-  icon: <FaYoutube className="text-white text-2xl" />,
-  gradient: "from-red-600 to-red-700 hover:from-red-700 hover:to-red-800",
-  textColor: "text-red-100",
-  target: "_blank",
-  rel:"noopener noreferrer"
-},
+  {
+    name: "YouTube",
+    desc: "Subscribe to our channel",
+    href: "https://www.youtube.com/@rentelligenceai",
+    icon: <FaYoutube className="text-white text-2xl" />,
+    gradient: "from-red-600 to-red-700 hover:from-red-700 hover:to-red-800",
+    textColor: "text-red-100",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  },
   {
     name: "X (Twitter)",
     desc: "Latest updates",
@@ -265,6 +265,13 @@ export const ceoVideos = {
       img: "/pace-hindi.jpg",
       videoUrl: "https://www.youtube.com/watch?v=sW5eNoTO5D0&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=6"
     },
+    {
+      title: "PACE लेवल 1 चंडीगढ़ के अंदर 🚀 | Rentelligence द्वारा संचालित AI शिक्षा कार्यक्रम",
+      desc: "भारत के चंडीगढ़ में आयोजित पहले PACE लेवल 1 कार्यक्रम की विशेष झलकियाँ देखें, यह एक मील का पत्थर साबित होने वाला आयोजन था जो कृत्रिम बुद्धिमत्ता की शिक्षा और भविष्य के लिए तैयार कौशल पर केंद्रित था।",
+      duration: "1:32",
+      img: "/pace-hindi2.jpg",
+      videoUrl: "https://youtu.be/Ajtj0NJKNrY?si=h_u6KhANbKIHGkM4"
+    },
   ],
   ar: [
     {
@@ -304,108 +311,127 @@ export const ceoVideos = {
   ]
 };
 
-export const businessLanguages = [
-  { code: "en", flag: "🇺🇸", name: "English" },
+
+ export const businessLanguages = [
+   { code: "en", flag: "🇺🇸", name: "English" },
   { code: "hi", flag: "🇮🇳", name: "Hindi" },
-  { code: "zh", flag: "🇨🇳", name: "Chinese" },
-  { code: "th", flag: "🇹🇭", name: "Thai" },
-  { code: "ar", flag: "🇸🇦", name: "Arabic" },
-  { code: "es", flag: "🇪🇸", name: "Spanish" },
+  { code: "mr", flag: "🇮🇳", name: "Marathi" },
+  { code: "bn", flag: "🇮🇳", name: "Bengali" },
+  { code: "ta", flag: "🇮🇳", name: "Tamil" },
 ];
 
 export const businessVideos = [
   {
-  
-  desc: "Comprehensive overview of Rentelligence business model and revenue streams.",
-  lang: ["es", "hi", "zh", "ar", "th", "en"],
-  
-  // Har language ka alag data
-  languages: {
-    en: {
-      title: "Business Model Explanation",
-      youtubeId: "yOtw9rlp2_o",
-      img: "/bussinessmodal.jpg", // English image
-      duration: "4:30",
-      desc: "Comprehensive overview of Rentelligence business model and revenue streams." // Optional: alag description
+
+    desc: "Comprehensive overview of Rentelligence business model and revenue streams.",
+    // lang: ["es", "hi", "zh", "ar", "th", "en"],
+   lang: [ "hi","en", "mr", "bn", "ta"],
+
+    languages: {
+      en: {
+        title: "Rentelligence Business Model Explained: Earning Through AI Technology",
+        youtubeId: "yOtw9rlp2_o",
+        img: "/bussinessmodal.jpg", 
+        duration: "4:30",
+        desc: "Comprehensive overview of Rentelligence business model and revenue streams." // Optional: alag description
+      },
+      hi: {
+        title: "रेंटेलिजेंस व्यापार मॉडल: आय सृजन के स्रोत, कमाई के चैनल एवं विकास रणनीति",
+        youtubeId: "D5fbn5nfJ5E",
+        img: "/bussinessmodalhindi.jpg",
+        duration: "12:39",
+        desc: "रेंटेलिजेंस बिजनेस मॉडल और राजस्व धाराओं का व्यापक अवलोकन।रेंटेलिजेंस के विकेंद्रीकृत AI मार्केटप्लेस बिजनेस मॉडल, बहु-स्तरीय राजस्व धाराओं, साझेदार लाभांश संरचना और दीर्घकालिक आय सृजन रणनीतियों का व्यापक परिचय।"
+      },
+      mr: {
+        title: "नवशिक्यांसाठी प्रशिक्षण कार्यक्रम (बीटीपी) - तृप्तीकडून",
+        youtubeId: "g9dx8G6YVwQ",
+        img: "/bussinessmodal1.jpg",
+        duration: "12:06",
+        desc: "या व्हिडिओत आम्ही रेंटेलिजन्स बघणार आहोत — जगातील पहिले विकेंद्रित AI/ML मार्केटप्लेस,जिथे तुम्ही AI एजंट भाड्याने, लीजवर किंवा खरेदी करून वास्तविक उत्पन्न मिळवू शकता."
+      },
+      bn: {
+        title: "শুরুর দিকের প্রশিক্ষণ কর্মসূচি (বিটিপি) - তৃপ্তির তত্ত্বাবধানে", 
+        youtubeId: "ObY2hPqFtPg",
+        img: "/bussinessmodal1.jpg",
+        duration: "11:03",
+        desc: "এই ভিডিওতে, আমরা রেন্টেলিজেন্স অন্বেষণ করব — বিশ্বের প্রথম বিকেন্দ্রীকৃত AI/ML মার্কেটপ্লেস,যেখানে আপনি বাস্তব আয় তৈরি করতে AI এজেন্ট ভাড়া, লিজ বা ক্রয় করতে পারেন।"
+      },
+      ta: {
+        title: "புதியவர்கள் பயிற்சி திட்டம் (BTP) - திருப்ப்தி மூலம்", 
+        youtubeId: "10IkY68a3l8",
+        img: "/bussinessmodal1.jpg",
+        duration: "12:15",
+        desc: "இந்த வீடியோவில், நாம் ரென்டெல்லிஜென்ஸை ஆராய்வோம் — உலகின் முதல் பரவலாக்கப்பட்ட AI/ML சந்தை,இங்கு நீங்கள் உண்மையான வருமானம் ஈட்ட AI முகவர்களை வாடகைக்கு எடுக்கலாம், குத்தகைக்கு எடுக்கலாம் அல்லது வாங்கலாம்."
+      },
     },
-    hi: {
-      title: "व्यापार मॉडल स्पष्टीकरण",
-      youtubeId: "D5fbn5nfJ5E",
-      img: "/bussinessmodalhindi.jpg", 
-      duration: "12:39", 
-      desc: "रेंटेलिजेंस बिजनेस मॉडल और राजस्व धाराओं का व्यापक अवलोकन।"
-    },
-   es: {
-      title: "Explicación del Modelo de Negocio", // Spanish title
-      youtubeId: "yOtw9rlp2_o",
-      img: "/bussinessmodal.jpg",
-      duration: "4:30",
-      desc: "Descripción general del modelo de negocio y flujos de ingresos de Rentelligence."
-    },
-    zh: {
-      title: "商业模式说明", // Chinese title
-      youtubeId: "yOtw9rlp2_o",
-      img: "/bussinessmodal.jpg",
-      duration: "4:30",
-      desc: "Rentelligence商业模式和收入流的全面概述。"
-    },
-    ar: {
-      title: "شرح نموذج العمل", // Arabic title
-      youtubeId: "yOtw9rlp2_o",
-      img: "/bussinessmodal.jpg",
-      duration: "4:30",
-      desc: "نظرة شاملة لنموذج عمل Rentelligence ومسارات الإيرادات."
-    },
-    th: {
-      title: "คำอธิบายโมเดลธุรกิจ", // Thai title
-      youtubeId: "yOtw9rlp2_o",
-      img: "/bussinessmodal.jpg",
-      duration: "4:30",
-      desc: "ภาพรว"
-  }
-},
-  }
+  },
+  {
+    desc: "How to get started with Rentelligence platform as a business partner.",
+    lang: ["en"],
+    languages: {
+      en: {
+        title: "Getting Started Guide of Beginners Training Program ( BTP ) by Tripti",
+        youtubeId: "j-PFlWWFUEY",
+        img: "/bussinessmodal1.jpg",
+        duration: "10:35",
+        desc: " we’ll explore Rentelligence — the world’s first decentralized AI/ML marketplace,where you can rent, lease, or own AI Agents."
+      }
+    }
+  },
+   {
+    desc: "How to get started with Rentelligence platform as a business partner.",
+    lang: ["hi"],
+    languages: {
+      hi: {
+        title: "रेंटेलिजेंस बेसिक प्रशिक्षण कार्यक्रम | एआई, वेब3 और बुद्धिमान एजेंटों के भविष्य में महारत हासिल करें",
+        youtubeId: "3bAdQzhHKrk",
+        img: "/bussinessmodal1.jpg",
+        duration: "10:54",
+        desc: "रेंटेलिजेंस BTP विकेंद्रीकृत AI/Web3 मार्केटप्लेस की मूलभूत समझ प्रदान करता है, जिससे प्रतिभागी विभिन्न क्षेत्रों में इंटेलिजेंट एजेंट्स का प्रभावी उपयोग कर सकें।"
+      }
+    }
+  },
 ];
-  // {
-  //   title: "Market Analysis & Opportunity",
-  //   desc: "Deep dive into market size, competitive landscape, and growth opportunities.",
-  //   duration: "15:30",
-  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
-  //   img: "/BusinessImages/MarketAnalytics.jpg",
-  //   youtubeId: "kXYiU_JCYtU",
-  // },
-  // {
-  //   title: "Financial Projections",
-  //   desc: "Detailed financial forecasts, projections, and investment requirements.",
-  //   duration: "10:20",
-  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
-  //   img: "/BusinessImages/financial Project.jpg",
-  //   youtubeId: "JGwWNGJdvx8",
-  // },
-  // {
-  //   title: "Team & Leadership",
-  //   desc: "Introduction to key team members, advisors, and leadership expertise.",
-  //   duration: "8:15",
-  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
-  //   img: "/BusinessImages/Team.jpg",
-  //   youtubeId: "3JZ_D3ELwOQ",
-  // },
-  // {
-  //   title: "Technology & Innovation",
-  //   desc: "Overview of AI technology stack, innovation approach, and technical advantages.",
-  //   duration: "14:10",
-  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
-  //   img: "/BusinessImages/Technonlogy.jpg",
-  //   youtubeId: "9bZkp7q19f0",
-  // },
-  // {
-  //   title: "Success Stories & Case Studies",
-  //   desc: "Real client success stories and case studies demonstrating our impact.",
-  //   duration: "11:45",
-  //   lang: ["es", "hi", "zh", "ar", "th", "en"],
-  //   img: "/BusinessImages/SuccessStory.jpg",
-  //   youtubeId: "tVj0ZTS4WF4",
-  // },
+// {
+//   title: "Market Analysis & Opportunity",
+//   desc: "Deep dive into market size, competitive landscape, and growth opportunities.",
+//   duration: "15:30",
+//   lang: ["es", "hi", "zh", "ar", "th", "en"],
+//   img: "/BusinessImages/MarketAnalytics.jpg",
+//   youtubeId: "kXYiU_JCYtU",
+// },
+// {
+//   title: "Financial Projections",
+//   desc: "Detailed financial forecasts, projections, and investment requirements.",
+//   duration: "10:20",
+//   lang: ["es", "hi", "zh", "ar", "th", "en"],
+//   img: "/BusinessImages/financial Project.jpg",
+//   youtubeId: "JGwWNGJdvx8",
+// },
+// {
+//   title: "Team & Leadership",
+//   desc: "Introduction to key team members, advisors, and leadership expertise.",
+//   duration: "8:15",
+//   lang: ["es", "hi", "zh", "ar", "th", "en"],
+//   img: "/BusinessImages/Team.jpg",
+//   youtubeId: "3JZ_D3ELwOQ",
+// },
+// {
+//   title: "Technology & Innovation",
+//   desc: "Overview of AI technology stack, innovation approach, and technical advantages.",
+//   duration: "14:10",
+//   lang: ["es", "hi", "zh", "ar", "th", "en"],
+//   img: "/BusinessImages/Technonlogy.jpg",
+//   youtubeId: "9bZkp7q19f0",
+// },
+// {
+//   title: "Success Stories & Case Studies",
+//   desc: "Real client success stories and case studies demonstrating our impact.",
+//   duration: "11:45",
+//   lang: ["es", "hi", "zh", "ar", "th", "en"],
+//   img: "/BusinessImages/SuccessStory.jpg",
+//   youtubeId: "tVj0ZTS4WF4",
+// },
 
 
 // export const ceoVideos = [
@@ -440,7 +466,7 @@ export const modules = [
         desc: "Step-by-step guide to registering new users",
         duration: "1:06",
         img: "/userregistration.jpg",
-        videoUrl:"https://youtu.be/a9xZjQj-R6Y?si=LM6Wac6HwQ8bAPcd"
+        videoUrl: "https://youtu.be/a9xZjQj-R6Y?si=LM6Wac6HwQ8bAPcd"
       },
     ],
   },
@@ -454,7 +480,7 @@ export const modules = [
         desc: "Learn secure login",
         duration: "1:06",
         img: "/userregistration.jpg",
-        videoUrl:"https://youtu.be/a9xZjQj-R6Y?si=LM6Wac6HwQ8bAPcd"
+        videoUrl: "https://youtu.be/a9xZjQj-R6Y?si=LM6Wac6HwQ8bAPcd"
       },
     ],
   },
@@ -468,7 +494,7 @@ export const modules = [
         desc: "Using Self Deposit",
         duration: "0:58",
         img: "/deposit.jpg",
-        videoUrl:"https://www.youtube.com/watch?v=ZSG25_L0-Y0"
+        videoUrl: "https://www.youtube.com/watch?v=ZSG25_L0-Y0"
       },
     ],
   },
@@ -482,7 +508,7 @@ export const modules = [
         desc: "Step-by-step leasing",
         duration: "1:54",
         img: "/leaseagent.jpg",
-        videoUrl:"https://youtu.be/knh6zaDc1bM?si=G8BhEHm4oYrI9NBJ"
+        videoUrl: "https://youtu.be/knh6zaDc1bM?si=G8BhEHm4oYrI9NBJ"
       },
     ],
   },
@@ -496,7 +522,7 @@ export const modules = [
         desc: "Allocate funds properly",
         duration: "1:10",
         img: "/funddeposit.jpg",
-        videoUrl:"https://youtu.be/giwtPWN4Tk0?si=Z9OeIomtlrHo7bdL"
+        videoUrl: "https://youtu.be/giwtPWN4Tk0?si=Z9OeIomtlrHo7bdL"
       },
     ],
   },
@@ -510,7 +536,7 @@ export const modules = [
         desc: "Understanding reports and analytics for agents in CRM",
         duration: "2:24",
         img: "/analytic.jpg",
-        videoUrl:"https://www.youtube.com/watch?v=KwMrOmceO_s"
+        videoUrl: "https://www.youtube.com/watch?v=KwMrOmceO_s"
       },
     ],
   },
@@ -524,9 +550,9 @@ export const modules = [
         desc: "Analyze team",
         duration: "1:30",
         img: "/affilate.jpg",
-        videoUrl:"https://www.youtube.com/watch?v=oR0t15Sc_Pw"
+        videoUrl: "https://www.youtube.com/watch?v=oR0t15Sc_Pw"
       },
-      
+
     ],
   },
 ];
