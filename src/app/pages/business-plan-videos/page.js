@@ -15,7 +15,7 @@ const BusinessPlanVideos = () => {
   const [selectedLang, setSelectedLang] = useState("en");
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  const availableLanguages = ["en", "hi","mr","bn","ta" ];
+  const availableLanguages = ["en", "hi","mr","bn","ta","ru","zh"];
 
   const filteredVideos = selectedLang
     ? businessVideos.filter((video) => video?.lang?.includes(selectedLang))
@@ -205,19 +205,6 @@ const BusinessPlanVideos = () => {
                       </>
                     )}
                   </button>
-                  
-                  {/* <button 
-                    className={`px-3 py-2 border rounded-lg transition-colors ${
-                      isAvailableInSelectedLang
-                        ? "border-gray-300 hover:bg-gray-50 cursor-pointer"
-                        : "border-gray-200 bg-gray-100 cursor-not-allowed"
-                    }`}
-                    disabled={!isAvailableInSelectedLang}
-                  >
-                    <RiDownloadLine className={`${
-                      isAvailableInSelectedLang ? "text-gray-600" : "text-gray-400"
-                    }`} />
-                  </button> */}
                 </div>
               </div>
             </div>

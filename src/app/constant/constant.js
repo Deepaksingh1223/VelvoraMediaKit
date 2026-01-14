@@ -318,6 +318,9 @@ export const ceoVideos = {
   { code: "mr", flag: "🇮🇳", name: "Marathi" },
   { code: "bn", flag: "🇮🇳", name: "Bengali" },
   { code: "ta", flag: "🇮🇳", name: "Tamil" },
+  { code: "th", flag: "🇹🇭", name: "Thai" },
+{ code: "ru", flag: "🇷🇺", name: "Russian" },
+{ code: "zh", flag: "🇨🇳", name: "Chinese" }
 ];
 
 export const businessVideos = [
@@ -391,69 +394,46 @@ export const businessVideos = [
       }
     }
   },
+    {
+    desc: "How to get started with Rentelligence platform as a business partner.",
+    lang: ["th"],
+    languages: {
+      th: {
+        title: "रेंटेलिजेंस बेसिक प्रशिक्षण कार्यक्रम | एआई, वेब3 और बुद्धिमान एजेंटों के भविष्य में महारत हासिल करें",
+        youtubeId: "3bAdQzhHKrk",
+        img: "/bussinessmodal1.jpg",
+        duration: "10:54",
+        desc: "रेंटेलिजेंस BTP विकेंद्रीकृत AI/Web3 मार्केटप्लेस की मूलभूत समझ प्रदान करता है, जिससे प्रतिभागी विभिन्न क्षेत्रों में इंटेलिजेंट एजेंट्स का प्रभावी उपयोग कर सकें।"
+      }
+    }
+  },
+    {
+    desc: "В этом видео мы простым и понятным языком объясняем концептуальное понимание Rentelligence и модели PACE.Если вы хотите разобраться, как работает экосистема Rentelligence, какую роль играют AI-агенты и как модель PACE усиливает всю систему — это видео для вас!",
+    lang: ["ru"],
+    languages: {
+      ru: {
+        title: "Концептуальное понимание Rentelligence и PACE | Полный разбор системы и возможностей",
+        youtubeId: "ZpozDmGgjHg",
+        img: "/ZpozDmGgjHg-HD.jpg",
+        duration: "07:13",
+        desc: "В этом видео мы простым и понятным языком объясняем концептуальное понимание Rentelligence и модели PACE."
+      }
+    }
+  },
+    {
+    desc: "利用人工智慧代理賦能未來—租賃、租用、擁有和發展 Lìyòng réngōng zhìhuì dàilǐ fù néng wèilái—zūlìn, zūyòng, yǒngyǒu hé fāzhǎn",
+    lang: ["zh"],
+    languages: {
+      zh: {
+        title: "對Rentelligence和PACE完整框架的概念理解（中文版）Duì Rentelligence hé PACE wánzhěng kuàngjià de gàiniàn lǐjiě (zhōngwén bǎn)",
+        youtubeId: "Nv08tPiQxZA",
+        img: "/Nv08tPiQxZA-HD.jpg",
+        duration: "06:34",
+        desc: "利用人工智慧代理賦能未來—租賃、租用、擁有和發展 Lìyòng réngōng zhìhuì dàilǐ fù néng wèilái—zūlìn, zūyòng, yǒngyǒu hé fāzhǎn"
+      }
+    }
+  },
 ];
-// {
-//   title: "Market Analysis & Opportunity",
-//   desc: "Deep dive into market size, competitive landscape, and growth opportunities.",
-//   duration: "15:30",
-//   lang: ["es", "hi", "zh", "ar", "th", "en"],
-//   img: "/BusinessImages/MarketAnalytics.jpg",
-//   youtubeId: "kXYiU_JCYtU",
-// },
-// {
-//   title: "Financial Projections",
-//   desc: "Detailed financial forecasts, projections, and investment requirements.",
-//   duration: "10:20",
-//   lang: ["es", "hi", "zh", "ar", "th", "en"],
-//   img: "/BusinessImages/financial Project.jpg",
-//   youtubeId: "JGwWNGJdvx8",
-// },
-// {
-//   title: "Team & Leadership",
-//   desc: "Introduction to key team members, advisors, and leadership expertise.",
-//   duration: "8:15",
-//   lang: ["es", "hi", "zh", "ar", "th", "en"],
-//   img: "/BusinessImages/Team.jpg",
-//   youtubeId: "3JZ_D3ELwOQ",
-// },
-// {
-//   title: "Technology & Innovation",
-//   desc: "Overview of AI technology stack, innovation approach, and technical advantages.",
-//   duration: "14:10",
-//   lang: ["es", "hi", "zh", "ar", "th", "en"],
-//   img: "/BusinessImages/Technonlogy.jpg",
-//   youtubeId: "9bZkp7q19f0",
-// },
-// {
-//   title: "Success Stories & Case Studies",
-//   desc: "Real client success stories and case studies demonstrating our impact.",
-//   duration: "11:45",
-//   lang: ["es", "hi", "zh", "ar", "th", "en"],
-//   img: "/BusinessImages/SuccessStory.jpg",
-//   youtubeId: "tVj0ZTS4WF4",
-// },
-
-
-// export const ceoVideos = [
-//   {
-//     title: "Welcome Message",
-//     desc: "Personal welcome from our CEO introducing Rentelligence vision and mission.",
-//     img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20welcome%20video%20thumbnail%20with%20confident%20business%20leader%20in%20modern%20executive%20office%2C%20corporate%20welcome%20message%20presentation%2C%20CEO%20speaking%20directly%20to%20camera%20in%20premium%20business%20setting&width=400&height=225&seq=ceo-welcome&orientation=landscape",
-//     duration: "4:30",
-//   },
-//   {
-//     title: "Our Vision for AI Future",
-//     desc: "Deep dive into our vision for artificial intelligence and the future of technology.",
-//     img: "https://readdy.ai/api/search-image?query=CEO%20vision%20presentation%20video%20with%20futuristic%20AI%20technology%20backdrop%2C%20executive%20discussing%20artificial%20intelligence%20future%2C%20professional%20leadership%20video%20with%20innovative%20tech%20visuals%20and%20holographic%20elements&width=400&height=225&seq=ceo-vision&orientation=landscape",
-//     duration: "6:15",
-//   },
-//   {
-//     title: "Leadership Philosophy",
-//     desc: "Our CEO shares leadership principles and management philosophy that drives our success.",
-//     img: "https://readdy.ai/api/search-image?query=Professional%20CEO%20leadership%20video%20with%20team%20collaboration%20background%2C%20executive%20discussing%20leadership%20philosophy%2C%20corporate%20management%20presentation%20with%20inspiring%20business%20environment&width=400&height=225&seq=ceo-leadership&orientation=landscape",
-//     duration: "5:45",
-//   },
-// ];
 
 export const modules = [
   {
