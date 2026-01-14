@@ -15,7 +15,7 @@ const BusinessPlanVideos = () => {
   const [selectedLang, setSelectedLang] = useState("en");
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  const availableLanguages = ["en", "hi","mr","bn","ta","ru","zh"];
+  const availableLanguages = ["en", "hi","mr","bn","ta","ru","zh","th"];
 
   const filteredVideos = selectedLang
     ? businessVideos.filter((video) => video?.lang?.includes(selectedLang))
