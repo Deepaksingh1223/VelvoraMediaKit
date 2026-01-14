@@ -395,15 +395,15 @@ export const businessVideos = [
     }
   },
     {
-    desc: "How to get started with Rentelligence platform as a business partner.",
+    desc: "Kĥn phb khwām k̄hêācı næw khwām khid k̄hxng Rentelligence læa PACE - s̄ảrwc khwām h̄māy khwām s̄ảkhạỵ læa wiṭhī thī̀ cheụ̄̀xm yong kạb thī̀ xyū̀ xāṣ̄ạy s̄mạy h̄ım̀ læa khwām yạ̀ngyụ̄n",
     lang: ["th"],
     languages: {
       th: {
-        title: "रेंटेलिजेंस बेसिक प्रशिक्षण कार्यक्रम | एआई, वेब3 और बुद्धिमान एजेंटों के भविष्य में महारत हासिल करें",
-        youtubeId: "3bAdQzhHKrk",
-        img: "/bussinessmodal1.jpg",
-        duration: "10:54",
-        desc: "रेंटेलिजेंस BTP विकेंद्रीकृत AI/Web3 मार्केटप्लेस की मूलभूत समझ प्रदान करता है, जिससे प्रतिभागी विभिन्न क्षेत्रों में इंटेलिजेंट एजेंट्स का प्रभावी उपयोग कर सकें।"
+        title: "Khwām k̄hêācı cheing næwkhid keī̀yw kạb khwām c̄hlād h̄lạk h̄ælm læa PACE | thịy",
+        youtubeId: "y-OH9M5Cb9A",
+        img: "/y-OH9M5Cb9A-HD.jpg",
+        duration: "06:27",
+        desc: "Kĥn phb khwām k̄hêācı næw khwām khid k̄hxng Rentelligence læa PACE - s̄ảrwc khwām h̄māy khwām s̄ảkhạỵ læa wiṭhī thī̀ cheụ̄̀xm yong kạb thī̀ xyū̀ xāṣ̄ạy s̄mạy h̄ım̀ læa khwām yạ̀ngyụ̄n"
       }
     }
   },
@@ -433,6 +433,7 @@ export const businessVideos = [
       }
     }
   },
+
 ];
 
 export const modules = [
