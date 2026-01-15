@@ -37,7 +37,9 @@ const CeoMessage = () => {
       "German": "de",
       "Russian": "ru",
       "Arabic": "ar",
-      "Spanish": "es"
+      "Spanish": "es",
+      "French": "FR",
+      "Vietnamese": "VN",
     };
     return langMap[label] || "en";
   };
