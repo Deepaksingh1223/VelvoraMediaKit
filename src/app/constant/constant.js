@@ -237,6 +237,8 @@ export const Languages = [
   { flag: "🇷🇺", label: "Russian" },
   { flag: "🇸🇦", label: "Arabic" },
   { flag: "🇪🇸", label: "Spanish" },
+  { flag: "🇫🇷", label: "French" },
+  { flag: "🇻🇳", label: "Vietnamese" },
 ]
 
 export const ceoVideos = {
@@ -307,6 +309,24 @@ export const ceoVideos = {
       duration: "07:24",
       img: "/pace-spanish.jpg",
       videoUrl: "https://www.youtube.com/watch?v=l7-bE4pBOZE&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=4"
+    }
+  ],
+  FR: [
+    {
+      title: "Compréhension conceptuelle de Rentelligence et PACE | Explication complète en Français",
+      desc: "Dans cette vidéo, nous expliquons en détail la compréhension conceptuelle de Rentelligence et du modèle PACE.",
+      duration: "06:31",
+      img: "/TfD4cEUTKlg-HD.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=TfD4cEUTKlg"
+    }
+  ],
+   VN: [
+    {
+      title: "Hiểu Biết Khái Niệm Về Rentelligence và PACE | Giải Thích Chi Tiết, Dễ Hiểu Cho Người Mới",
+      desc: "Trong video này, chúng ta sẽ tìm hiểu khái niệm Rentelligence và mô hình PACE một cách đơn giản, trực quan và dễ hiểu nhất.",
+      duration: "06:36",
+      img: "/XI33vKFwiQk-HD.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=XI33vKFwiQk"
     }
   ]
 };
