@@ -126,7 +126,7 @@ function MediaResourcesContent() {
           {/* Page Heading */}
           <div className="text-center mb-12">
             <p className="text-xs font-bold tracking-[0.18em] uppercase text-[rgba(147,197,253,0.78)] mb-3">
-              Rentelligence Platform
+              Velvora Platform
             </p>
             <h1 className="text-[clamp(32px,5vw,52px)] font-extrabold tracking-[-1.5px] text-white leading-[1.1]">
               Media Resources
@@ -228,7 +228,7 @@ function MediaResourcesContent() {
                   <div className="flex flex-col gap-3">
                     {/* Promotional Flyer */}
                     <a
-                      href="/Rental.pdf"
+                      href="/"
                       download="Rental_Promotional_Flyer.pdf"
                       className="mr-dl-card block bg-gradient-to-br from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9] rounded-2xl p-5 no-underline overflow-hidden relative"
                     >
@@ -240,7 +240,7 @@ function MediaResourcesContent() {
                         Promotional Flyer
                       </div>
                       <div className="text-xs text-white/70 leading-relaxed mb-2.5">
-                        Professional marketing flyer showcasing Rentelligence AI
+                        Professional marketing flyer showcasing Velvora AI
                         solutions.
                       </div>
                       <div className="flex gap-2 flex-wrap">

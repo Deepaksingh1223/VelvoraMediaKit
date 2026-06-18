@@ -86,7 +86,7 @@ export const links = [
   {
     name: "Instagram",
     desc: "Follow our journey",
-    href: "https://www.instagram.com/rentelligence.ai/?",
+    href: "https://www.instagram.com/Velvora.ai/?",
     icon: <FaInstagram className="text-white text-2xl" />,
     gradient:
       "from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600",
@@ -173,23 +173,23 @@ export const videos = [
   },
   {
     title: "Rentelligence: World’s 1st Decentralized AI/ML Marketplace | Buy, Lease & Rent AI Agents",
-    desc: "Introducing Rentelligence - the world's first decentralized marketplace for AI and machine learning solutions. Discover how businesses can buy, lease, or rent pre-trained AI agents for any industry need without massive upfront investment.",
+    desc: "Introducing Velvora - the world's first decentralized marketplace for AI and machine learning solutions. Discover how businesses can buy, lease, or rent pre-trained AI agents for any industry need without massive upfront investment.",
     img: "/worlds.jpg",
     youtubeId: "BtzB1v7rD80",
     duration: "0:26",
     category: "culture",
   },
   {
-    title: "AI Replaces Jobs, Rentelligence Creates Opportunities | Future of Work 2027",
-    desc: "While AI eliminates traditional jobs, Rentelligence is creating new opportunities through our AI agent marketplace. Discover how we're building a future where humans collaborate with AI to create higher-value work and universal earning potential.",
+    title: "AI Replaces Jobs, Velvora Creates Opportunities | Future of Work 2027",
+    desc: "While AI eliminates traditional jobs, Velvora is creating new opportunities through our AI agent marketplace. Discover how we're building a future where humans collaborate with AI to create higher-value work and universal earning potential.",
     img: "/replacejob.jpg",
     youtubeId: "Coo3gRemvOA",
     duration: "2:45",
     category: "stories",
   },
   {
-    title: "AI Isn’t Just Data — It’s Imagination | Discover Rentelligence.ai",
-    desc: "Move beyond algorithms and datasets. Discover how Rentelligence is redefining AI as a canvas for human creativity and imagination. Where data meets dreams, and artificial intelligence becomes artistic inspiration.",
+    title: "AI Isn’t Just Data — It’s Imagination | Discover Velvora.ai",
+    desc: "Move beyond algorithms and datasets. Discover how Velvora is redefining AI as a canvas for human creativity and imagination. Where data meets dreams, and artificial intelligence becomes artistic inspiration.",
     img: "/justreplace.jpg",
     youtubeId: "CDYEEYy_MzA",
     duration: "0:17",
@@ -244,8 +244,8 @@ export const Languages = [
 export const ceoVideos = {
   en: [
     {
-      title: "Conceptual Understanding of Rentelligence and PACE | Complete Framework Explained in English",
-      desc: "Learn about the complete framework and conceptual understanding of Rentelligence and PACE",
+      title: "Conceptual Understanding of Velvora and PACE | Complete Framework Explained in English",
+      desc: "Learn about the complete framework and conceptual understanding of Velvora and PACE",
       duration: "06:35",
       img: "/pace-english.jpg",
       videoUrl: "https://www.youtube.com/watch?v=qz-SmV0VzLA"
@@ -261,14 +261,14 @@ export const ceoVideos = {
   ],
   hi: [
     {
-      title: "Rentelligence और PACE की संकल्पनात्मक समझ | Complete Concept Explained in Hindi",
-      desc: "Rentelligence और PACE की पूरी अवधारणा और ढांचे को समझें",
+      title: "Velvora और PACE की संकल्पनात्मक समझ | Complete Concept Explained in Hindi",
+      desc: "Velvora और PACE की पूरी अवधारणा और ढांचे को समझें",
       duration: "07:39",
       img: "/pace-hindi.jpg",
       videoUrl: "https://www.youtube.com/watch?v=sW5eNoTO5D0&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=6"
     },
     {
-      title: "PACE लेवल 1 चंडीगढ़ के अंदर 🚀 | Rentelligence द्वारा संचालित AI शिक्षा कार्यक्रम",
+      title: "PACE लेवल 1 चंडीगढ़ के अंदर 🚀 | Velvora द्वारा संचालित AI शिक्षा कार्यक्रम",
       desc: "भारत के चंडीगढ़ में आयोजित पहले PACE लेवल 1 कार्यक्रम की विशेष झलकियाँ देखें, यह एक मील का पत्थर साबित होने वाला आयोजन था जो कृत्रिम बुद्धिमत्ता की शिक्षा और भविष्य के लिए तैयार कौशल पर केंद्रित था।",
       duration: "1:32",
       img: "/pace-hindi2.jpg",
@@ -277,8 +277,8 @@ export const ceoVideos = {
   ],
   ar: [
     {
-      title: "الفهم المفاهيمي لـ Rentelligence و PACE | شرح شامل بطريقة مبسّطة",
-      desc: "تعرف على الإطار الكامل والفهم المفاهيمي لـ Rentelligence و PACE",
+      title: "الفهم المفاهيمي لـ Velvora و PACE | شرح شامل بطريقة مبسّطة",
+      desc: "تعرف على الإطار الكامل والفهم المفاهيمي لـ Velvora و PACE",
       duration: "07:32",
       img: "/pace-arabic.jpg",
       videoUrl: "https://www.youtube.com/watch?v=4FUyDTriCXQ&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=5"
@@ -286,7 +286,7 @@ export const ceoVideos = {
   ],
   de: [
     {
-      title: "Konzeptuelles Verständnis von Rentelligence und PACE | Klare Erklärung für Anfänger",
+      title: "Konzeptuelles Verständnis von Velvora und PACE | Klare Erklärung für Anfänger",
       desc: "Ein vollständiges Verständnis des Rentelligence- und PACE-Rahmens und der zugrunde liegenden Konzepte",
       duration: "06:49",
       img: "/pace-german.jpg",
@@ -295,8 +295,8 @@ export const ceoVideos = {
   ],
   ru: [
     {
-      title: "Концептуальное понимание Rentelligence и PACE | Полный разбор системы и возможностей",
-      desc: "Изучение структуры и концептуального понимания Rentelligence и PACE",
+      title: "Концептуальное понимание Velvora и PACE | Полный разбор системы и возможностей",
+      desc: "Изучение структуры и концептуального понимания Velvora и PACE",
       duration: "07:24",
       img: "/pace-russian.jpg",
       videoUrl: "https://www.youtube.com/watch?v=ZpozDmGgjHg&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=3"
@@ -304,8 +304,8 @@ export const ceoVideos = {
   ],
   es: [
     {
-      title: "Comprensión Conceptual de Rentelligence y PACE | Marco Completo Explicado",
-      desc: "Aprende sobre el marco completo y la comprensión conceptual de Rentelligence y PACE",
+      title: "Comprensión Conceptual de Velvora y PACE | Marco Completo Explicado",
+      desc: "Aprende sobre el marco completo y la comprensión conceptual de Velvora y PACE",
       duration: "07:24",
       img: "/pace-spanish.jpg",
       videoUrl: "https://www.youtube.com/watch?v=l7-bE4pBOZE&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=4"
@@ -313,8 +313,8 @@ export const ceoVideos = {
   ],
   FR: [
     {
-      title: "Compréhension conceptuelle de Rentelligence et PACE | Explication complète en Français",
-      desc: "Dans cette vidéo, nous expliquons en détail la compréhension conceptuelle de Rentelligence et du modèle PACE.",
+      title: "Compréhension conceptuelle de Velvora et PACE | Explication complète en Français",
+      desc: "Dans cette vidéo, nous expliquons en détail la compréhension conceptuelle de Velvora et du modèle PACE.",
       duration: "06:31",
       img: "/TfD4cEUTKlg-HD.jpg",
       videoUrl: "https://www.youtube.com/watch?v=TfD4cEUTKlg"
@@ -322,8 +322,8 @@ export const ceoVideos = {
   ],
    VN: [
     {
-      title: "Hiểu Biết Khái Niệm Về Rentelligence và PACE | Giải Thích Chi Tiết, Dễ Hiểu Cho Người Mới",
-      desc: "Trong video này, chúng ta sẽ tìm hiểu khái niệm Rentelligence và mô hình PACE một cách đơn giản, trực quan và dễ hiểu nhất.",
+      title: "Hiểu Biết Khái Niệm Về Velvora và PACE | Giải Thích Chi Tiết, Dễ Hiểu Cho Người Mới",
+      desc: "Trong video này, chúng ta sẽ tìm hiểu khái niệm Velvora và mô hình PACE một cách đơn giản, trực quan và dễ hiểu nhất.",
       duration: "06:36",
       img: "/XI33vKFwiQk-HD.jpg",
       videoUrl: "https://www.youtube.com/watch?v=XI33vKFwiQk"
@@ -346,17 +346,17 @@ export const ceoVideos = {
 export const businessVideos = [
   {
 
-    desc: "Comprehensive overview of Rentelligence business model and revenue streams.",
+    desc: "Comprehensive overview of Velvora business model and revenue streams.",
     // lang: ["es", "hi", "zh", "ar", "th", "en"],
    lang: [ "hi","en", "mr", "bn", "ta"],
 
     languages: {
       en: {
-        title: "Rentelligence Business Model Explained: Earning Through AI Technology",
+        title: "Velvora Business Model Explained: Earning Through AI Technology",
         youtubeId: "yOtw9rlp2_o",
         img: "/bussinessmodal.jpg", 
         duration: "4:30",
-        desc: "Comprehensive overview of Rentelligence business model and revenue streams." // Optional: alag description
+        desc: "Comprehensive overview of Velvora business model and revenue streams." // Optional: alag description
       },
       hi: {
         title: "रेंटेलिजेंस व्यापार मॉडल: आय सृजन के स्रोत, कमाई के चैनल एवं विकास रणनीति",
@@ -389,7 +389,7 @@ export const businessVideos = [
     },
   },
   {
-    desc: "How to get started with Rentelligence platform as a business partner.",
+    desc: "How to get started with Velvora platform as a business partner.",
     lang: ["en"],
     languages: {
       en: {
@@ -397,12 +397,12 @@ export const businessVideos = [
         youtubeId: "j-PFlWWFUEY",
         img: "/bussinessmodal1.jpg",
         duration: "10:35",
-        desc: " we’ll explore Rentelligence — the world’s first decentralized AI/ML marketplace,where you can rent, lease, or own AI Agents."
+        desc: " we’ll explore Velvora — the world’s first decentralized AI/ML marketplace,where you can rent, lease, or own AI Agents."
       }
     }
   },
    {
-    desc: "How to get started with Rentelligence platform as a business partner.",
+    desc: "How to get started with Velvora platform as a business partner.",
     lang: ["hi"],
     languages: {
       hi: {
@@ -415,7 +415,7 @@ export const businessVideos = [
     }
   },
     {
-    desc: "Kĥn phb khwām k̄hêācı næw khwām khid k̄hxng Rentelligence læa PACE - s̄ảrwc khwām h̄māy khwām s̄ảkhạỵ læa wiṭhī thī̀ cheụ̄̀xm yong kạb thī̀ xyū̀ xāṣ̄ạy s̄mạy h̄ım̀ læa khwām yạ̀ngyụ̄n",
+    desc: "Kĥn phb khwām k̄hêācı næw khwām khid k̄hxng Velvora læa PACE - s̄ảrwc khwām h̄māy khwām s̄ảkhạỵ læa wiṭhī thī̀ cheụ̄̀xm yong kạb thī̀ xyū̀ xāṣ̄ạy s̄mạy h̄ım̀ læa khwām yạ̀ngyụ̄n",
     lang: ["th"],
     languages: {
       th: {
@@ -423,20 +423,20 @@ export const businessVideos = [
         youtubeId: "y-OH9M5Cb9A",
         img: "/y-OH9M5Cb9A-HD.jpg",
         duration: "06:27",
-        desc: "Kĥn phb khwām k̄hêācı næw khwām khid k̄hxng Rentelligence læa PACE - s̄ảrwc khwām h̄māy khwām s̄ảkhạỵ læa wiṭhī thī̀ cheụ̄̀xm yong kạb thī̀ xyū̀ xāṣ̄ạy s̄mạy h̄ım̀ læa khwām yạ̀ngyụ̄n"
+        desc: "Kĥn phb khwām k̄hêācı næw khwām khid k̄hxng Velvora læa PACE - s̄ảrwc khwām h̄māy khwām s̄ảkhạỵ læa wiṭhī thī̀ cheụ̄̀xm yong kạb thī̀ xyū̀ xāṣ̄ạy s̄mạy h̄ım̀ læa khwām yạ̀ngyụ̄n"
       }
     }
   },
     {
-    desc: "В этом видео мы простым и понятным языком объясняем концептуальное понимание Rentelligence и модели PACE.Если вы хотите разобраться, как работает экосистема Rentelligence, какую роль играют AI-агенты и как модель PACE усиливает всю систему — это видео для вас!",
+    desc: "В этом видео мы простым и понятным языком объясняем концептуальное понимание Velvora и модели PACE.Если вы хотите разобраться, как работает экосистема Rentelligence, какую роль играют AI-агенты и как модель PACE усиливает всю систему — это видео для вас!",
     lang: ["ru"],
     languages: {
       ru: {
-        title: "Концептуальное понимание Rentelligence и PACE | Полный разбор системы и возможностей",
+        title: "Концептуальное понимание Velvora и PACE | Полный разбор системы и возможностей",
         youtubeId: "ZpozDmGgjHg",
         img: "/ZpozDmGgjHg-HD.jpg",
         duration: "07:13",
-        desc: "В этом видео мы простым и понятным языком объясняем концептуальное понимание Rentelligence и модели PACE."
+        desc: "В этом видео мы простым и понятным языком объясняем концептуальное понимание Velvora и модели PACE."
       }
     }
   },
@@ -445,7 +445,7 @@ export const businessVideos = [
     lang: ["zh"],
     languages: {
       zh: {
-        title: "對Rentelligence和PACE完整框架的概念理解（中文版）Duì Rentelligence hé PACE wánzhěng kuàngjià de gàiniàn lǐjiě (zhōngwén bǎn)",
+        title: "對Rentelligence和PACE完整框架的概念理解（中文版）Duì Velvora hé PACE wánzhěng kuàngjià de gàiniàn lǐjiě (zhōngwén bǎn)",
         youtubeId: "Nv08tPiQxZA",
         img: "/Nv08tPiQxZA-HD.jpg",
         duration: "06:34",
