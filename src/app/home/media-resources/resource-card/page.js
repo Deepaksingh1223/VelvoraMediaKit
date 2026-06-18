@@ -33,7 +33,8 @@ const ResourceCard = ({ resource }) => {
 
   return (
     <div
-      className="group bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-500 cursor-pointer hover:scale-[1.02] relative"
+      className="group mr-link-card border-1 border-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-500 cursor-pointer 
+      hover:scale-[1.02] relative"
       onClick={handleCardClick}
     >
       <div className="relative h-52 overflow-hidden">
@@ -56,10 +57,10 @@ const ResourceCard = ({ resource }) => {
         </div>
       </div>
       <div className="p-7">
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+        <h3 className="text-xl font-bold text-white-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
           {resource?.title}
         </h3>
-        <p className="text-gray-600 text-sm leading-relaxed mb-5">
+        <p className="text-white text-sm leading-relaxed mb-5">
           {resource?.desc}
         </p>
         <div className="flex items-center justify-between">

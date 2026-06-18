@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
@@ -26,12 +25,9 @@ function MediaResourcesContent() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const tab = searchParams.get('tab');
-    if (tab === 'social') {
-      setActiveTab('social');
-    }
+    const tab = searchParams.get("tab");
+    if (tab === "social") setActiveTab("social");
   }, [searchParams]);
-
 
   const filteredResources =
     filter === "All"
@@ -39,327 +35,415 @@ function MediaResourcesContent() {
       : resourcesData.filter((r) => r.category === filter);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative overflow-hidden" id="social">
-      {/* Background Blobs */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full transform -translate-x-36 -translate-y-36"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-purple-100/30 to-transparent rounded-full transform translate-x-48 translate-y-48"></div>
+    <>
+      <style jsx>{`
+        @keyframes orb1 {
+          0%,
+          100% {
+            transform: translate(-50%, 0);
+          }
+          50% {
+            transform: translate(-50%, 18px);
+          }
+        }
+        @keyframes orb2 {
+          0%,
+          100% {
+            transform: translate(0, 0);
+          }
+          50% {
+            transform: translate(-16px, -20px);
+          }
+        }
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .mr-tab:hover {
+          background: rgba(255, 255, 255, 0.09) !important;
+          color: rgba(255, 255, 255, 0.9) !important;
+        }
+        .mr-link-card {
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .mr-link-card:hover {
+          transform: translateY(-2px) scale(1.01);
+        }
+        .mr-dl-card {
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .mr-dl-card:hover {
+          transform: translateY(-2px) scale(1.01);
+          box-shadow: 0 8px 32px rgba(37, 99, 235, 0.3);
+        }
+        .mr-filter-btn {
+          transition: all 0.2s;
+        }
+        .mr-filter-btn:hover {
+          opacity: 0.85;
+        }
+      `}</style>
 
-      <div className="relative grid grid-cols-1 lg:grid-cols-4 gap-8">
-        {/* Sidebar */}
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-          {/* Header */}
-          <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-6 border-b">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Quick Access Hub
-            </h2>
+      <div className="relative bg-[#030712] min-h-screen py-16 px-6 pb-20 overflow-hidden">
+        {/* Ambient Orbs */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div
+            className="absolute -top-[6%] left-1/2 w-[900px] h-[600px] rounded-full"
+            style={{
+              background:
+                "radial-gradient(ellipse, rgba(37,99,235,0.22) 0%, transparent 68%)",
+              animation: "orb1 16s ease-in-out infinite",
+            }}
+          />
+          <div
+            className="absolute top-[30%] -left-[15%] w-[560px] h-[560px] rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(109,40,217,0.12) 0%, transparent 70%)",
+              animation: "orb2 20s ease-in-out infinite",
+            }}
+          />
+          <div
+            className="absolute bottom-[5%] -right-[10%] w-[480px] h-[480px] rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(6,182,212,0.09) 0%, transparent 70%)",
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
+            }}
+          />
+        </div>
 
-            {/* Tabs */}
-            <div className="flex flex-col  space-x-1 bg-white rounded-xl p-1 shadow-inner">
-              <button
-                onClick={() => setActiveTab("social")}
-                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${activeTab === "social"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
-                  : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  }`}
-              >
-                <FaShareAlt className="text-lg" />
-                <span className="font-medium text-sm whitespace-nowrap">
-                  Social Media
-                </span>
-              </button>
-
-              <button
-                onClick={() => setActiveTab("downloads")}
-                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${activeTab === "downloads"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
-                  : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  }`}
-              >
-                <FaCloudDownloadAlt className="text-lg" />
-                <span className="font-medium text-sm whitespace-nowrap">
-                  Quick Downloads
-                </span>
-              </button>
-
-              <button
-                onClick={() => setActiveTab("apps")}
-                className={`flex-1 flex items-center gap-1 space-x-2 py-3 px-4 rounded-lg transition-all cursor-pointer ${activeTab === "apps"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
-                  : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  }`}
-              >
-                <FaMobileAlt className="text-lg" />
-                <span className="font-medium text-sm whitespace-nowrap">
-                  Mobile Apps
-                </span>
-              </button>
-            </div>
+        {/* Main Content Wrapper */}
+        <div className="relative max-w-[1280px] mx-auto">
+          {/* Page Heading */}
+          <div className="text-center mb-12">
+            <p className="text-xs font-bold tracking-[0.18em] uppercase text-[rgba(147,197,253,0.78)] mb-3">
+              Rentelligence Platform
+            </p>
+            <h1 className="text-[clamp(32px,5vw,52px)] font-extrabold tracking-[-1.5px] text-white leading-[1.1]">
+              Media Resources
+            </h1>
+            <p className="text-base text-white/45 mt-3 max-w-[480px] mx-auto">
+              Comprehensive collection of digital assets for partners &amp;
+              affiliates
+            </p>
           </div>
 
-          {/* Content */}
-          <div className="p-1">
-            {activeTab === "social" && (
-              <div className="p-6">
-                <div>
-                  <div className="mb-6">
-                    <p className="text-gray-600 text-sm">
+          {/* Grid: Sidebar + Main */}
+          <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6">
+            {/* Sidebar */}
+            <div
+              className="overflow-hidden"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.10)",
+                backdropFilter: "blur(14px)",
+                WebkitBackdropFilter: "blur(14px)",
+                borderRadius: 24,
+              }}
+            >
+              {/* Sidebar Header */}
+              <div className="p-6 pb-5 border-b border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)]">
+                <h2 className="text-lg font-bold text-white mb-4 tracking-[-0.3px]">
+                  Quick Access Hub
+                </h2>
+
+                {/* Tab Buttons */}
+                <div className="flex flex-col gap-2">
+                  {[
+                    { key: "social", Icon: FaShareAlt, label: "Social Media" },
+                    {
+                      key: "downloads",
+                      Icon: FaCloudDownloadAlt,
+                      label: "Quick Downloads",
+                    },
+                    { key: "apps", Icon: FaMobileAlt, label: "Mobile Apps" },
+                  ].map(({ key, Icon, label }) => (
+                    <button
+                      key={key}
+                      className={`mr-tab flex items-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-semibold border-none transition-all duration-200 ${
+                        activeTab === key
+                          ? "bg-gradient-to-br from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9] text-white shadow-[0_4px_18px_rgba(37,99,235,0.40)]"
+                          : "bg-white/5 text-white/60 hover:bg-white/9 hover:text-white/90"
+                      }`}
+                      onClick={() => setActiveTab(key)}
+                    >
+                      <Icon size={15} />
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tab Content */}
+              <div className="p-5">
+                {/* Social Tab */}
+                {activeTab === "social" && (
+                  <div>
+                    <p className="text-sm text-white/42 mb-4">
                       Connect with us on social platforms
                     </p>
+                    <div className="flex flex-col gap-2.5">
+                      {links.map((item, i) => (
+                        <a
+                          key={i}
+                          href={item.href}
+                          target={item.target}
+                          rel={item.rel}
+                          className="mr-link-card flex items-center gap-3.5 border border-white/10 rounded-xl p-3.5 no-underline"
+                          style={{
+                            background: item.gradient
+                              ? `linear-gradient(135deg, ${item.gradient})`
+                              : "rgba(255,255,255,0.06)",
+                          }}
+                        >
+                          <div className="w-10 h-10 bg-white/18 rounded-xl flex items-center justify-center flex-shrink-0">
+                            {item.icon}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-semibold text-white">
+                              {item.name}
+                            </div>
+                            <div className="text-xs text-white/60 mt-0.5">
+                              {item.desc}
+                            </div>
+                          </div>
+                          <FiExternalLink className="text-white/55 flex-shrink-0" />
+                        </a>
+                      ))}
+                    </div>
                   </div>
-                  <div className="grid grid-cols-1 gap-4">
-                    {links.map((item, i) => (
-                      <a
-                        key={i}
-                        href={item.href}
-                        target={item.target}  
-        rel={item.rel} 
-                        className={`group flex items-center space-x-4 bg-gradient-to-r ${item.gradient} rounded-xl p-4 transition-all duration-300 hover:scale-[1.02] cursor-pointer`}
+                )}
+
+                {/* Downloads Tab */}
+                {activeTab === "downloads" && (
+                  <div className="flex flex-col gap-3">
+                    {/* Promotional Flyer */}
+                    <a
+                      href="/Rental.pdf"
+                      download="Rental_Promotional_Flyer.pdf"
+                      className="mr-dl-card block bg-gradient-to-br from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9] rounded-2xl p-5 no-underline overflow-hidden relative"
+                    >
+                      <div className="absolute top-0 right-0 w-20 h-20 rounded-full bg-white/8 translate-x-[30px] -translate-y-[30px]" />
+                      <div className="w-11 h-11 bg-white/18 rounded-xl mb-3 flex items-center justify-center">
+                        <FaRegImage className="text-white text-xl" />
+                      </div>
+                      <div className="text-[15px] font-bold text-white mb-1.5">
+                        Promotional Flyer
+                      </div>
+                      <div className="text-xs text-white/70 leading-relaxed mb-2.5">
+                        Professional marketing flyer showcasing Rentelligence AI
+                        solutions.
+                      </div>
+                      <div className="flex gap-2 flex-wrap">
+                        <span className="text-[11px] font-semibold bg-white/15 text-white rounded-full px-2.5 py-0.5">
+                          Ready for print &amp; digital
+                        </span>
+                        <span className="text-[11px] text-white/55">
+                          PDF · 4.4 MB
+                        </span>
+                      </div>
+                    </a>
+
+                    {/* Legal Certificate */}
+                    <a
+                      href="/pages/legal-certificate"
+                      className="mr-dl-card block bg-white/5 border border-white/10 rounded-2xl p-5 no-underline overflow-hidden relative"
+                    >
+                      <div className="w-11 h-11 bg-gradient-to-br from-[#059669] to-[#10b981] rounded-xl mb-3 flex items-center justify-center">
+                        <PiCertificate className="text-white text-[22px]" />
+                      </div>
+                      <div className="text-[15px] font-bold text-white mb-1.5">
+                        Legal Certificate
+                      </div>
+                      <div className="text-xs text-white/50 leading-relaxed mb-2.5">
+                        Official business registration and certification
+                        documents.
+                      </div>
+                      <div className="flex gap-2 flex-wrap">
+                        <span className="text-[11px] font-semibold bg-[rgba(16,185,129,0.18)] text-[#34d399] rounded-full px-2.5 py-0.5">
+                          Verified &amp; Authentic
+                        </span>
+                        <span className="text-[11px] text-white/35">
+                          JPG · 1.8 MB
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                )}
+
+                {/* Apps Tab */}
+                {activeTab === "apps" && (
+                  <div>
+                    <p className="text-sm text-white/42 mb-4">
+                      Download our mobile apps for the best experience
+                    </p>
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-dl-card flex flex-col items-center text-center bg-white/5 border border-white/10 rounded-2xl p-6 no-underline"
+                    >
+                      <div className="w-14 h-14 bg-gradient-to-br from-[#1d4ed8] to-[#0ea5e9] rounded-2xl mb-3.5 flex items-center justify-center">
+                        <FaGooglePlay className="text-white text-2xl" />
+                      </div>
+                      <div className="text-[15px] font-bold text-white mb-1">
+                        Google Play
+                      </div>
+                      <div className="text-xs text-white/48 mb-3">
+                        Download for Android
+                      </div>
+                      <div className="flex gap-0.5 justify-center mb-1">
+                        {[...Array(5)].map((_, i) => (
+                          <AiFillStar key={i} className="text-[#fbbf24] text-xs" />
+                        ))}
+                      </div>
+                      <div className="text-[11px] text-white/35">4.9 rating</div>
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <main
+              className="p-8 overflow-hidden relative"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.10)",
+                backdropFilter: "blur(14px)",
+                WebkitBackdropFilter: "blur(14px)",
+                borderRadius: 24,
+              }}
+            >
+              {/* Subtle Top-Right Glow */}
+              <div
+                className="absolute -top-[10%] -right-[8%] w-[320px] h-[320px] rounded-full pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%)",
+                }}
+              />
+
+              <div className="relative">
+                {/* Header Row */}
+                <div className="flex items-start justify-between flex-wrap gap-4 mb-6">
+                  <div>
+                    <h2 className="text-[32px] font-extrabold text-white tracking-[-1px] mb-1.5">
+                      Media Resources
+                    </h2>
+                    <p className="text-[15px] text-white/48">
+                      Comprehensive collection of digital assets
+                    </p>
+                  </div>
+
+                  {/* Filter Pills */}
+                  <div className="flex gap-1.5 bg-white/5 border border-white/10 rounded-full p-1">
+                    {["All", "Videos", "Documents"].map((f) => (
+                      <button
+                        key={f}
+                        className="mr-filter-btn text-[13px] font-semibold px-[18px] py-2 rounded-full border-none cursor-pointer transition-all duration-200 hover:opacity-85"
+                        style={{
+                          background:
+                            filter === f
+                              ? "linear-gradient(135deg, #1d4ed8, #0ea5e9)"
+                              : "transparent",
+                          color:
+                            filter === f ? "#fff" : "rgba(255,255,255,0.50)",
+                          boxShadow:
+                            filter === f
+                              ? "0 2px 12px rgba(37,99,235,.35)"
+                              : "none",
+                        }}
+                        onClick={() => setFilter(f)}
                       >
-                        <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                          {item.icon}
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="text-white font-semibold">
-                            {item.name}
-                          </h4>
-                          <p className={`${item.textColor} text-sm`}>
-                            {item.desc}
-                          </p>
-                        </div>
-                        <FiExternalLink className="text-white/70 group-hover:text-white" />
-                      </a>
+                        {f}
+                      </button>
                     ))}
                   </div>
                 </div>
-              </div>
-            )}
 
-            {activeTab === "downloads" && (
-              <div className="p-3">
-                <div className="space-y-4">
-                  {/* Promotional Flyer Card */}
-                  <a
-                    href="/Rental.pdf"
-                    download="Rental_Promotional_Flyer.pdf"
-                    className="group block bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-[1.02] relative overflow-hidden"
-                  >
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full transform translate-x-10 -translate-y-10"></div>
-
-                    <div className="mb-3 w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center group-hover:bg-white/30 transition-colors group-hover:scale-110 duration-300">
-                      <FaRegImage className="text-white text-2xl" />
-                    </div>
-
-                    <div className="relative flex items-start space-x-4">
-                      <div className="flex-1">
-                        <h3 className="text-lg font-bold text-white mb-2">
-                          Promotional Flyer
-                        </h3>
-                        <p className="text-blue-100 text-sm leading-relaxed mb-3">
-                          Professional marketing flyer showcasing Rentelligence
-                          AI solutions and services.
-                        </p>
-                        <div className=" items-center space-x-4">
-                          <span className="text-blue-200 text-xs font-medium bg-white/10 px-3 py-1 rounded-full">
-                            Ready for print &amp; digital
-                          </span>
-                          <span className="text-blue-200 text-xs">
-                            PDF • 4.4 MB
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                  {/* Legal Certificate Card */}
-                  <a
-                    href="/pages/legal-certificate"
-                    className="group block bg-white border-2 border-gray-200 hover:border-emerald-300 hover:shadow-xl rounded-xl p-6 cursor-pointer transition-all duration-300 hover:scale-[1.02] relative overflow-hidden"
-                  >
-                    <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-50 rounded-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
-
-                    <div className="mb-3 w-14 h-14 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <PiCertificate className="text-white text-2xl" />
-                    </div>
-
-                    <div className="relative flex items-start space-x-4">
-                      <div className="flex-1">
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">
-                          Legal Certificate
-                        </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                          Official business registration and certification
-                          documents.
-                        </p>
-                        <div className=" items-center space-x-4">
-                          <span className="text-emerald-600 text-xs font-medium bg-emerald-50 px-3 py-1 rounded-full">
-                            Verified &amp; Authentic
-                          </span>
-                          <span className="text-gray-500 text-xs">
-                            JPG • 1.8 MB
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
+                {/* Meta Row */}
+                <div className="flex items-center gap-2 text-[13px] text-white/35 mb-6">
+                  <RiDatabase2Line
+                    size={15}
+                    className="text-white/40 flex-shrink-0"
+                  />
+                  <span>6 Resources Available</span>
+                  <span className="opacity-40">•</span>
+                  <span>Updated Recently</span>
                 </div>
-              </div>
-            )}
 
-            {activeTab === "apps" && (
-              <div className="p-3">
-                <div className="mb-6">
-                  <p className="text-gray-600 text-sm">
-                    Download our mobile apps for the best experience
+                {/* Resources Grid */}
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6">
+                  {filteredResources.map((res, i) => (
+                    <ResourceCard key={i} resource={res} />
+                  ))}
+                </div>
+
+                {/* CTA Banner */}
+                <div
+                  className="mt-12 border border-white/10 rounded-2xl p-9 text-center relative overflow-hidden"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(37,99,235,0.18) 0%, rgba(109,40,217,0.14) 100%)",
+                  }}
+                >
+                  {/* Top Edge Line */}
+                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent" />
+                  <h3 className="text-[22px] font-bold text-white mb-2.5 tracking-[-0.4px]">
+                    Need Something Specific?
+                  </h3>
+                  <p className="text-sm text-white/48 mb-6 max-w-[380px] mx-auto">
+                    Can&apos;t find what you&apos;re looking for? Contact our
+                    team for custom resources.
                   </p>
-                </div>
-
-                <div className="space-y-4">
-                  {/* Google Play */}
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share
-"
+                  <Link
+                    href="https://velvora.ai/contact"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col items-center text-center bg-black hover:bg-gray-800 rounded-xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-br from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9] text-white text-sm font-semibold rounded-xl no-underline shadow-[0_6px_24px_rgba(37,99,235,0.40)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_32px_rgba(37,99,235,0.55)]"
                   >
-                    {/* Icon on Top */}
-                    <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                      <FaGooglePlay className="text-white text-3xl" />
-                    </div>
-
-                    {/* Text Content */}
-                    <h4 className="text-white font-semibold mb-1">Google Play</h4>
-                    <p className="text-gray-300 text-sm mb-3">Download for Android</p>
-
-                    {/* Rating Section */}
-                    <div className="flex flex-col items-center">
-                      <div className="flex items-center space-x-1 text-yellow-400 mb-1">
-                        {[...Array(5)].map((_, i) => (
-                          <AiFillStar key={i} className="text-xs" />
-                        ))}
-                      </div>
-                      <p className="text-gray-400 text-xs">4.9 rating</p>
-                    </div>
-                  </a>
-                  {/* App Store */}
-                  {/* <a
-                    href="https://play.google.com/store/apps/details?id=com.tayerkarex.Rentelligence_Mobile&pcampaignid=web_share
-"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex flex-col items-center text-center bg-black hover:bg-gray-800 rounded-xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer"
-                  >
-                    {/* Icon on Top 
-                    <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4">
-                      <FaApple className="text-white text-3xl" />
-                    </div>
-
-                    {/* Text Content 
-                    <h4 className="text-white font-semibold mb-1">App Store</h4>
-                    <p className="text-gray-300 text-sm mb-3">Download for iOS</p>
-
-                    {/* Rating Section 
-                    <div className="flex flex-col items-center">
-                      <div className="flex items-center space-x-1 text-yellow-400 mb-1">
-                        {[...Array(5)].map((_, i) => (
-                          <AiFillStar key={i} className="text-xs" />
-                        ))}
-                      </div>
-                      <p className="text-gray-400 text-xs">4.8 rating</p>
-                    </div>
-                  </a> */}
-
+                    <RiCustomerService2Line size={16} />
+                    Request Custom Resource
+                  </Link>
                 </div>
               </div>
-            )}
+            </main>
           </div>
         </div>
-        {/* Main Content */}
-        <main className="lg:col-span-3 order-1 lg:order-2 bg-white rounded-3xl shadow-xl p-8 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-blue-100/50 to-transparent rounded-full transform translate-x-32 -translate-y-32"></div>
-          <div className="relative">
-            <div className="flex items-center justify-between mb-6 flex-wrap">
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-3">
-                  Media Resources
-                </h2>
-                <p className="text-gray-600 text-lg mb-3">
-                  Comprehensive collection of digital assets
-                </p>
-              </div>
-
-              {/* Filter */}
-              <div className="md:flex items-center space-x-2 bg-gray-100 rounded-full p-1">
-                {["All", "Videos", "Documents"].map((f) => (
-                  <button
-                    key={f}
-                    onClick={() => setFilter(f)}
-                    className={`px-4 py-2 cursor-pointer text-sm font-medium rounded-full ${filter === f
-                      ? "bg-white shadow-sm text-gray-900"
-                      : "text-gray-600 hover:text-gray-900"
-                      }`}
-                  >
-                    {f}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="flex items-center space-x-2 mb-4 text-sm text-gray-500">
-              <RiDatabase2Line className="w-4 h-4" />
-              <span>6 Resources Available</span>
-              <span>•</span>
-              <span>Updated Recently</span>
-            </div>
-
-            {/* Resources Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {filteredResources.map((res, i) => (
-                <ResourceCard key={i} resource={res} />
-              ))}
-            </div>
-
-            {/* CTA */}
-            <div className="mt-12 text-center">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  Need Something Specific?
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Can&apos;t find what you&apos;re looking for? Contact our team for
-                  custom resources.
-                </p>
-                <Link
-                  href="https://rentelligence.ai/contact"
-                  className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 md:px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 w-full sm:w-auto text-center inline-flex items-center justify-center"
-                target="_blank" rel="noopener noreferrer">
-                  <RiCustomerService2Line className="inline mr-2" />
-                  <span className="whitespace-nowrap">Request Custom Resource</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </main>
       </div>
-    </div>
+    </>
   );
 }
 
 export default function MediaResources() {
   return (
-    <Suspense fallback={
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="bg-white rounded-3xl shadow-xl p-8 text-center">
-          <div className="animate-pulse">
-            <div className="h-8 bg-gray-200 rounded w-1/3 mx-auto mb-4"></div>
-            <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto mb-8"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              <div className="lg:col-span-1 h-64 bg-gray-100 rounded-xl"></div>
-              <div className="lg:col-span-3 h-96 bg-gray-100 rounded-xl"></div>
-            </div>
+    <Suspense
+      fallback={
+        <div className="bg-[#030712] min-h-screen flex items-center justify-center">
+          <div
+            className="p-12 text-center max-w-[480px]"
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.10)",
+              borderRadius: 24,
+            }}
+          >
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1d4ed8] to-[#0ea5e9] mx-auto mb-5 animate-spin" />
+            <div className="text-base text-white/50">Loading resources…</div>
           </div>
         </div>
-      </div>
-    }>
+      }
+    >
       <MediaResourcesContent />
     </Suspense>
   );

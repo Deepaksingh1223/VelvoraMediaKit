@@ -47,7 +47,7 @@
 //   //     // Simulate loading delay
 //   //     await new Promise(resolve => setTimeout(resolve, 2000));
 //   //     const link = document.createElement('a');
-//   //     link.href = 'https://app.rentelligence.ai/Rentall.pdf';
+//   //     link.href = 'https://velvora.ai/Rentall.pdf';
 //   //     link.download = 'Investor_Pitch_Deck.pdf';
 //   //     document.body.appendChild(link);
 //   //     link.click();
@@ -93,7 +93,7 @@
 //       setIsPreviewingInvestor(true);
 //       // Simulate loading delay
 //       await new Promise(resolve => setTimeout(resolve, 2000));
-//       window.open('https://app.rentelligence.ai/Rentall.pdf', '_blank');
+//       window.open('https://velvora.ai/Rentall.pdf', '_blank');
 //       setIsPreviewingInvestor(false);
 //     }
 //   };
@@ -162,7 +162,7 @@
 //       // Simulate loading delay
 //       await new Promise(resolve => setTimeout(resolve, 2000));
 //       const link = document.createElement('a');
-//       // link.href = 'https://app.rentelligence.ai/Rentall.pdf';
+//       // link.href = 'https://velvora.ai/Rentall.pdf';
 //       link.download = 'Product_Showcase.pdf';
 //       document.body.appendChild(link);
 //       link.click();
@@ -177,7 +177,7 @@
 //       setIsPreviewingShowcase(true);
 //       // Simulate loading delay
 //       await new Promise(resolve => setTimeout(resolve, 2000));
-//       // window.open('https://app.rentelligence.ai/Rentall.pdf', '_blank');
+//       // window.open('https://velvora.ai/Rentall.pdf', '_blank');
 //       setIsPreviewingShowcase(false);
 //     }
 //   };
@@ -447,7 +447,7 @@ const CompanyPresentations = () => {
   const handlePreviewInvestor = async () => {
     setIsPreviewingInvestor(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    window.open("https://app.rentelligence.ai/Rentall.pdf", "_blank");
+    window.open("https://velvora.ai/Rentall.pdf", "_blank");
     setIsPreviewingInvestor(false);
   };
 
