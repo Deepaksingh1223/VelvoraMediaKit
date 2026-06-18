@@ -50,23 +50,16 @@ export default function Footer() {
           {/* Top Row: Logo + CTA */}
           <div className="flex items-center justify-between flex-wrap gap-6 pb-7 border-b border-white/7">
             <Link href="/" className="flex items-center gap-3 no-underline group">
-              <div className="relative w-[42px] h-[42px] rounded-xl bg-white/6 border border-white/12 flex items-center justify-center overflow-hidden transition-all duration-250 group-hover:border-[rgba(37,99,235,0.55)] group-hover:bg-[rgba(37,99,235,0.12)]">
-                <Image
-                  src="/favicon.png"
-                  alt="Rentelligence Logo"
-                  width={26}
-                  height={26}
+          <Link href="/" className="flex items-center gap-3 no-underline group">
+           
+                <Image 
+                  src="/Home-Logo.png"
+                  alt="Velvora Logo"
+                  width={200}
+                  height={200}
                   className="relative z-[1] object-contain"
-                />
-              </div>
-              <div>
-                <div className="text-lg font-extrabold tracking-[-0.4px] bg-gradient-to-r from-white/40 to-[#60a5fa] bg-clip-text text-transparent">
-                  Rentelligence
-                </div>
-                <div className="text-[10px] font-semibold tracking-[0.14em] uppercase text-white/28 -mt-0.5">
-                  AI Platform
-                </div>
-              </div>
+                />  
+            </Link>
             </Link>
 
             <Link
@@ -103,7 +96,7 @@ export default function Footer() {
           {/* Bottom Row: Copyright + Badge */}
           <div className="flex items-center justify-between flex-wrap gap-3 pt-5">
             <div className="text-[13px] text-white/30 leading-relaxed">
-              © 2025 <span className="bg-gradient-to-r from-[#60a5fa] to-[#22d3ee] bg-clip-text text-transparent font-semibold">Rentelligence</span>. Empowering the future with AI Agents.
+              © 2025 <span className="bg-gradient-to-r from-[#60a5fa] to-[#22d3ee] bg-clip-text text-transparent font-semibold">Velvora</span>. Empowering the future with AI Agents.
               <br />
               <span className="text-[11px] text-white/22 font-normal">
                 All resources are official and regularly updated.

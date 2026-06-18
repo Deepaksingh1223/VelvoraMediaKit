@@ -84,7 +84,7 @@ export default function Header() {
            
                 <Image 
                   src="/Home-Logo.png"
-                  alt="Rentelligence Logo"
+                  alt="Velvora Logo"
                   width={200}
                   height={200}
                   className="relative z-[1] object-contain"
