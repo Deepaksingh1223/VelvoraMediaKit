@@ -142,7 +142,7 @@ export const videos = [
   {
     title: "Top 10 AI Tools",
     desc: "Discover the top 10 AI tools that are transforming business operations and driving innovation across industries.A practical guide to the best AI tools for marketing, analytics, customer service, and content creation - complete with real-world use cases and implementation tips.",
-    img: "/100AI.jpg",
+    img: "/100AI.png",
     youtubeId: "XDLThBvNw3U",
     duration: "0:33",
     category: "demos"
@@ -150,7 +150,7 @@ export const videos = [
   {
     title: "Earn Up To 220% with AI Agents! ",
     desc: "Discover how AI Agents can help you achieve up to 220% ROI by automating business processes and increasing operational efficiency. See real case studies showing 3x faster customer response times and 50% reduction in operational errors and AI Demand day by day increase.",
-    img: "/Earnupto.jpg",
+    img: "/Earnupto.png",
     youtubeId: "cCYrtBtKJOI",
     duration: "0:17",
     category: "testimonials",
@@ -158,7 +158,7 @@ export const videos = [
   {
     title: "In 20 Years, Robots Will Outnumber Humans? The Shocking Future of Humanoid AI Revealed by Elon Musk",
     desc: "Elon Musk reveals his startling prediction about humanoid robots surpassing human population in two decades. Explore the implications for society.",
-    img: "/20year.jpg",
+    img: "/20year.png",
     youtubeId: "ZQK24kYKYfY",
     duration: "0:32",
     category: "stories",
@@ -166,7 +166,7 @@ export const videos = [
   {
     title: "🔥Amazon Replaces 5 Lakh Employees with AI! The Future of Work is Here 🤖",
     desc: "Amazon's massive AI overhaul replaces 500,000 jobs with artificial intelligence. Discover which roles are disappearing first, what this means for global employment, and how workers can prepare for the AI-dominated workplace of tomorrow.",
-    img: "/amazonreplace.jpg",
+    img: "/amazonreplace.png",
     youtubeId: "JLfapai9Jfk",
     duration: "0:19",
     category: "demos",
@@ -174,7 +174,7 @@ export const videos = [
   {
     title: "Rentelligence: World’s 1st Decentralized AI/ML Marketplace | Buy, Lease & Rent AI Agents",
     desc: "Introducing Velvora - the world's first decentralized marketplace for AI and machine learning solutions. Discover how businesses can buy, lease, or rent pre-trained AI agents for any industry need without massive upfront investment.",
-    img: "/worlds.jpg",
+    img: "/worlds.png",
     youtubeId: "BtzB1v7rD80",
     duration: "0:26",
     category: "culture",
@@ -182,7 +182,7 @@ export const videos = [
   {
     title: "AI Replaces Jobs, Velvora Creates Opportunities | Future of Work 2027",
     desc: "While AI eliminates traditional jobs, Velvora is creating new opportunities through our AI agent marketplace. Discover how we're building a future where humans collaborate with AI to create higher-value work and universal earning potential.",
-    img: "/replacejob.jpg",
+    img: "/replacejob.png",
     youtubeId: "Coo3gRemvOA",
     duration: "2:45",
     category: "stories",
@@ -190,7 +190,7 @@ export const videos = [
   {
     title: "AI Isn’t Just Data — It’s Imagination | Discover Velvora.ai",
     desc: "Move beyond algorithms and datasets. Discover how Velvora is redefining AI as a canvas for human creativity and imagination. Where data meets dreams, and artificial intelligence becomes artistic inspiration.",
-    img: "/justreplace.jpg",
+    img: "/justreplace.png",
     youtubeId: "CDYEEYy_MzA",
     duration: "0:17",
     category: "culture",
@@ -198,7 +198,7 @@ export const videos = [
   {
     title: "Gibberlink Mode Explained: Game-Changing Feature or Just Hype",
     desc: "What is Gibberlink Mode and why is everyone talking about it?In this video, we break down Gibberlink Mode Explained — its purpose, features, real-world use cases, and whether it's worth enabling.If you're curious about performance enhancements, hidden features.",
-    img: "/gibber.jpg",
+    img: "/gibber.png",
     youtubeId: "Ri4DFDtqbBY",
     duration: "0:58",
     category: "testimonials",
@@ -206,7 +206,7 @@ export const videos = [
   {
     title: "75,000 Robots Working at Amazon! Will They Replace Humans? Robots to Run Their Warehouses!",
     desc: "Amazon has officially deployed over 75,000 robots across its warehouses — and this technology is transforming the future of eCommerce, logistics.",
-    img: "/amazon.jpg",
+    img: "/amazon.png",
     youtubeId: "JGyLoqJhGmE",
     duration: "0:22",
     category: "testimonials",
@@ -247,7 +247,7 @@ export const ceoVideos = {
       title: "Conceptual Understanding of Velvora and PACE | Complete Framework Explained in English",
       desc: "Learn about the complete framework and conceptual understanding of Velvora and PACE",
       duration: "06:35",
-      img: "/pace-english.jpg",
+      img: "/pace-english.png",
       videoUrl: "https://www.youtube.com/watch?v=qz-SmV0VzLA"
     },
 
@@ -255,7 +255,7 @@ export const ceoVideos = {
       title: "Glimpses and Reviews from the first PACE Level 1 program in Lucknow India 🇮🇳",
       desc: "Watch highlights and participant reviews from the inaugural PACE Level 1 training program held in Lucknow, India. See firsthand experiences and feedback from attendees.",
       duration: "02:22",
-      img: "/lkopace.jpg",
+      img: "/lkopace.png",
       videoUrl: "https://youtu.be/_XwnbglDJFI?si=4uMNMsFV3Bq1IfX6"
     },
   ],
@@ -264,14 +264,14 @@ export const ceoVideos = {
       title: "Velvora और PACE की संकल्पनात्मक समझ | Complete Concept Explained in Hindi",
       desc: "Velvora और PACE की पूरी अवधारणा और ढांचे को समझें",
       duration: "07:39",
-      img: "/pace-hindi.jpg",
+      img: "/pace-hindi.png",
       videoUrl: "https://www.youtube.com/watch?v=sW5eNoTO5D0&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=6"
     },
     {
       title: "PACE लेवल 1 चंडीगढ़ के अंदर 🚀 | Velvora द्वारा संचालित AI शिक्षा कार्यक्रम",
       desc: "भारत के चंडीगढ़ में आयोजित पहले PACE लेवल 1 कार्यक्रम की विशेष झलकियाँ देखें, यह एक मील का पत्थर साबित होने वाला आयोजन था जो कृत्रिम बुद्धिमत्ता की शिक्षा और भविष्य के लिए तैयार कौशल पर केंद्रित था।",
       duration: "1:32",
-      img: "/pace-hindi2.jpg",
+      img: "/pace-hindi2.png",
       videoUrl: "https://youtu.be/Ajtj0NJKNrY?si=h_u6KhANbKIHGkM4"
     },
   ],
@@ -280,7 +280,7 @@ export const ceoVideos = {
       title: "الفهم المفاهيمي لـ Velvora و PACE | شرح شامل بطريقة مبسّطة",
       desc: "تعرف على الإطار الكامل والفهم المفاهيمي لـ Velvora و PACE",
       duration: "07:32",
-      img: "/pace-arabic.jpg",
+      img: "/pace-arabic.png",
       videoUrl: "https://www.youtube.com/watch?v=4FUyDTriCXQ&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=5"
     },
   ],
@@ -289,7 +289,7 @@ export const ceoVideos = {
       title: "Konzeptuelles Verständnis von Velvora und PACE | Klare Erklärung für Anfänger",
       desc: "Ein vollständiges Verständnis des Rentelligence- und PACE-Rahmens und der zugrunde liegenden Konzepte",
       duration: "06:49",
-      img: "/pace-german.jpg",
+      img: "/pace-german.png",
       videoUrl: "https://www.youtube.com/watch?v=qG2ufD1--0I&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm"
     }
   ],
@@ -298,7 +298,7 @@ export const ceoVideos = {
       title: "Концептуальное понимание Velvora и PACE | Полный разбор системы и возможностей",
       desc: "Изучение структуры и концептуального понимания Velvora и PACE",
       duration: "07:24",
-      img: "/pace-russian.jpg",
+      img: "/pace-russian.png",
       videoUrl: "https://www.youtube.com/watch?v=ZpozDmGgjHg&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=3"
     }
   ],
@@ -307,7 +307,7 @@ export const ceoVideos = {
       title: "Comprensión Conceptual de Velvora y PACE | Marco Completo Explicado",
       desc: "Aprende sobre el marco completo y la comprensión conceptual de Velvora y PACE",
       duration: "07:24",
-      img: "/pace-spanish.jpg",
+      img: "/pace-spanish.png",
       videoUrl: "https://www.youtube.com/watch?v=l7-bE4pBOZE&list=PL-xvOSUdBpduSuBaBEGx2zSAWh0OI6ptm&index=4"
     }
   ],
@@ -316,7 +316,7 @@ export const ceoVideos = {
       title: "Compréhension conceptuelle de Velvora et PACE | Explication complète en Français",
       desc: "Dans cette vidéo, nous expliquons en détail la compréhension conceptuelle de Velvora et du modèle PACE.",
       duration: "06:31",
-      img: "/TfD4cEUTKlg-HD.jpg",
+      img: "/TfD4cEUTKlg-HD.png",
       videoUrl: "https://www.youtube.com/watch?v=TfD4cEUTKlg"
     }
   ],
@@ -325,7 +325,7 @@ export const ceoVideos = {
       title: "Hiểu Biết Khái Niệm Về Velvora và PACE | Giải Thích Chi Tiết, Dễ Hiểu Cho Người Mới",
       desc: "Trong video này, chúng ta sẽ tìm hiểu khái niệm Velvora và mô hình PACE một cách đơn giản, trực quan và dễ hiểu nhất.",
       duration: "06:36",
-      img: "/XI33vKFwiQk-HD.jpg",
+      img: "/XI33vKFwiQk-HD.png",
       videoUrl: "https://www.youtube.com/watch?v=XI33vKFwiQk"
     }
   ]
@@ -354,35 +354,35 @@ export const businessVideos = [
       en: {
         title: "Velvora Business Model Explained: Earning Through AI Technology",
         youtubeId: "yOtw9rlp2_o",
-        img: "/bussinessmodal.jpg", 
+        img: "/bussinessmodal.png", 
         duration: "4:30",
         desc: "Comprehensive overview of Velvora business model and revenue streams." // Optional: alag description
       },
       hi: {
         title: "रेंटेलिजेंस व्यापार मॉडल: आय सृजन के स्रोत, कमाई के चैनल एवं विकास रणनीति",
         youtubeId: "D5fbn5nfJ5E",
-        img: "/bussinessmodalhindi.jpg",
+        img: "/bussinessmodalhindi.png",
         duration: "12:39",
         desc: "रेंटेलिजेंस बिजनेस मॉडल और राजस्व धाराओं का व्यापक अवलोकन।रेंटेलिजेंस के विकेंद्रीकृत AI मार्केटप्लेस बिजनेस मॉडल, बहु-स्तरीय राजस्व धाराओं, साझेदार लाभांश संरचना और दीर्घकालिक आय सृजन रणनीतियों का व्यापक परिचय।"
       },
       mr: {
         title: "नवशिक्यांसाठी प्रशिक्षण कार्यक्रम (बीटीपी) - तृप्तीकडून",
         youtubeId: "g9dx8G6YVwQ",
-        img: "/bussinessmodal1.jpg",
+        img: "/bussinessmodal1.png",
         duration: "12:06",
         desc: "या व्हिडिओत आम्ही रेंटेलिजन्स बघणार आहोत — जगातील पहिले विकेंद्रित AI/ML मार्केटप्लेस,जिथे तुम्ही AI एजंट भाड्याने, लीजवर किंवा खरेदी करून वास्तविक उत्पन्न मिळवू शकता."
       },
       bn: {
         title: "শুরুর দিকের প্রশিক্ষণ কর্মসূচি (বিটিপি) - তৃপ্তির তত্ত্বাবধানে", 
         youtubeId: "ObY2hPqFtPg",
-        img: "/bussinessmodal1.jpg",
+        img: "/bussinessmodal1.png",
         duration: "11:03",
         desc: "এই ভিডিওতে, আমরা রেন্টেলিজেন্স অন্বেষণ করব — বিশ্বের প্রথম বিকেন্দ্রীকৃত AI/ML মার্কেটপ্লেস,যেখানে আপনি বাস্তব আয় তৈরি করতে AI এজেন্ট ভাড়া, লিজ বা ক্রয় করতে পারেন।"
       },
       ta: {
         title: "புதியவர்கள் பயிற்சி திட்டம் (BTP) - திருப்ப்தி மூலம்", 
         youtubeId: "10IkY68a3l8",
-        img: "/bussinessmodal1.jpg",
+        img: "/bussinessmodal1.png",
         duration: "12:15",
         desc: "இந்த வீடியோவில், நாம் ரென்டெல்லிஜென்ஸை ஆராய்வோம் — உலகின் முதல் பரவலாக்கப்பட்ட AI/ML சந்தை,இங்கு நீங்கள் உண்மையான வருமானம் ஈட்ட AI முகவர்களை வாடகைக்கு எடுக்கலாம், குத்தகைக்கு எடுக்கலாம் அல்லது வாங்கலாம்."
       },
@@ -395,7 +395,7 @@ export const businessVideos = [
       en: {
         title: "Getting Started Guide of Beginners Training Program ( BTP ) by Tripti",
         youtubeId: "j-PFlWWFUEY",
-        img: "/bussinessmodal1.jpg",
+        img: "/bussinessmodal1.png",
         duration: "10:35",
         desc: " we’ll explore Velvora — the world’s first decentralized AI/ML marketplace,where you can rent, lease, or own AI Agents."
       }
@@ -408,7 +408,7 @@ export const businessVideos = [
       hi: {
         title: "रेंटेलिजेंस बेसिक प्रशिक्षण कार्यक्रम | एआई, वेब3 और बुद्धिमान एजेंटों के भविष्य में महारत हासिल करें",
         youtubeId: "3bAdQzhHKrk",
-        img: "/bussinessmodal1.jpg",
+        img: "/bussinessmodal1.png",
         duration: "10:54",
         desc: "रेंटेलिजेंस BTP विकेंद्रीकृत AI/Web3 मार्केटप्लेस की मूलभूत समझ प्रदान करता है, जिससे प्रतिभागी विभिन्न क्षेत्रों में इंटेलिजेंट एजेंट्स का प्रभावी उपयोग कर सकें।"
       }
@@ -421,7 +421,7 @@ export const businessVideos = [
       th: {
         title: "Khwām k̄hêācı cheing næwkhid keī̀yw kạb khwām c̄hlād h̄lạk h̄ælm læa PACE | thịy",
         youtubeId: "y-OH9M5Cb9A",
-        img: "/y-OH9M5Cb9A-HD.jpg",
+        img: "/y-OH9M5Cb9A-HD.png",
         duration: "06:27",
         desc: "Kĥn phb khwām k̄hêācı næw khwām khid k̄hxng Velvora læa PACE - s̄ảrwc khwām h̄māy khwām s̄ảkhạỵ læa wiṭhī thī̀ cheụ̄̀xm yong kạb thī̀ xyū̀ xāṣ̄ạy s̄mạy h̄ım̀ læa khwām yạ̀ngyụ̄n"
       }
@@ -434,7 +434,7 @@ export const businessVideos = [
       ru: {
         title: "Концептуальное понимание Velvora и PACE | Полный разбор системы и возможностей",
         youtubeId: "ZpozDmGgjHg",
-        img: "/ZpozDmGgjHg-HD.jpg",
+        img: "/ZpozDmGgjHg-HD.png",
         duration: "07:13",
         desc: "В этом видео мы простым и понятным языком объясняем концептуальное понимание Velvora и модели PACE."
       }
@@ -447,7 +447,7 @@ export const businessVideos = [
       zh: {
         title: "對Rentelligence和PACE完整框架的概念理解（中文版）Duì Velvora hé PACE wánzhěng kuàngjià de gàiniàn lǐjiě (zhōngwén bǎn)",
         youtubeId: "Nv08tPiQxZA",
-        img: "/Nv08tPiQxZA-HD.jpg",
+        img: "/Nv08tPiQxZA-HD.png",
         duration: "06:34",
         desc: "利用人工智慧代理賦能未來—租賃、租用、擁有和發展 Lìyòng réngōng zhìhuì dàilǐ fù néng wèilái—zūlìn, zūyòng, yǒngyǒu hé fāzhǎn"
       }
@@ -466,7 +466,7 @@ export const modules = [
         title: "Basic User Registration",
         desc: "Step-by-step guide to registering new users",
         duration: "1:06",
-        img: "/userregistration.jpg",
+        img: "/userregistration.png",
         videoUrl: "https://youtu.be/a9xZjQj-R6Y?si=LM6Wac6HwQ8bAPcd"
       },
     ],
@@ -480,7 +480,7 @@ export const modules = [
         title: "Login Steps",
         desc: "Learn secure login",
         duration: "1:06",
-        img: "/userregistration.jpg",
+        img: "/userregistration.png",
         videoUrl: "https://youtu.be/a9xZjQj-R6Y?si=LM6Wac6HwQ8bAPcd"
       },
     ],
@@ -494,7 +494,7 @@ export const modules = [
         title: "Self Deposit",
         desc: "Using Self Deposit",
         duration: "0:58",
-        img: "/deposit.jpg",
+        img: "/deposit.png",
         videoUrl: "https://www.youtube.com/watch?v=ZSG25_L0-Y0"
       },
     ],
@@ -508,7 +508,7 @@ export const modules = [
         title: "Assign Lease Agent",
         desc: "Step-by-step leasing",
         duration: "1:54",
-        img: "/leaseagent.jpg",
+        img: "/leaseagent.png",
         videoUrl: "https://youtu.be/knh6zaDc1bM?si=G8BhEHm4oYrI9NBJ"
       },
     ],
@@ -522,7 +522,7 @@ export const modules = [
         title: "Fund Allocation",
         desc: "Allocate funds properly",
         duration: "1:10",
-        img: "/funddeposit.jpg",
+        img: "/funddeposit.png",
         videoUrl: "https://youtu.be/giwtPWN4Tk0?si=Z9OeIomtlrHo7bdL"
       },
     ],
@@ -536,7 +536,7 @@ export const modules = [
         title: "Analytic",
         desc: "Understanding reports and analytics for agents in CRM",
         duration: "2:24",
-        img: "/analytic.jpg",
+        img: "/analytic.png",
         videoUrl: "https://www.youtube.com/watch?v=KwMrOmceO_s"
       },
     ],
@@ -550,7 +550,7 @@ export const modules = [
         title: "Business Dashboard & Team Structure Explained",
         desc: "Analyze team",
         duration: "1:30",
-        img: "/affilate.jpg",
+        img: "/affilate.png",
         videoUrl: "https://www.youtube.com/watch?v=oR0t15Sc_Pw"
       },
 
